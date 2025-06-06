@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import DestinationDetail from "./pages/DestinationDetail";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminDestinasiPage from "./pages/admin/AdminDestinasiPage";
+import AdminTestimoniPage from "./pages/admin/AdminTestimoniPage";
+import AdminPesanPage from "./pages/admin/AdminPesanPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/kategori/:category" element={<CategoryPage />} />
           <Route path="/destinasi/:slug" element={<DestinationDetail />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/destinasi" element={<AdminDestinasiPage />} />
+          <Route path="/admin/testimoni" element={<AdminTestimoniPage />} />
+          <Route path="/admin/pesan" element={<AdminPesanPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
