@@ -2,16 +2,17 @@
 import { useState } from 'react';
 import { Menu, X, MapPin, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('ID');
+  const { currentLanguage, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: 'Beranda', href: '#home' },
-    { label: 'Destinasi', href: '#destinasi' },
-    { label: 'Galeri', href: '#galeri' },
-    { label: 'Kontak', href: '#kontak' },
+    { label: t('beranda'), href: '#home' },
+    { label: t('destinasi'), href: '#destinasi' },
+    { label: t('galeri'), href: '#galeri' },
+    { label: t('kontak'), href: '#kontak' },
   ];
 
   const languages = [
@@ -19,6 +20,10 @@ const Header = () => {
     { code: 'EN', label: 'English', flag: '🇺🇸' },
     { code: 'MY', label: 'Melayu', flag: '🇲🇾' },
   ];
+
+  const handleLanguageChange = (langCode: string) => {
+    setLanguage(langCode);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-red-dark/95 backdrop-blur-md shadow-xl border-b border-red-soft/20">
@@ -61,15 +66,17 @@ const Header = () => {
                 className="text-white hover:text-golden-beige hover:bg-red-soft/20 font-poppins border border-red-soft/30 rounded-xl px-4 py-2"
               >
                 <Globe className="h-4 w-4 mr-2" />
-                {currentLang}
+                {currentLanguage}
               </Button>
               
-              <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 min-w-[140px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 min-w-[140px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => setCurrentLang(lang.code)}
-                    className="w-full text-left px-4 py-2 hover:bg-golden-beige/10 text-red-dark font-poppins text-sm flex items-center space-x-2 transition-colors duration-200"
+                    onClick={() => handleLanguageChange(lang.code)}
+                    className={`w-full text-left px-4 py-2 hover:bg-golden-beige/10 text-red-dark font-poppins text-sm flex items-center space-x-2 transition-colors duration-200 ${
+                      currentLanguage === lang.code ? 'bg-golden-beige/20 font-semibold' : ''
+                    }`}
                   >
                     <span className="text-lg">{lang.flag}</span>
                     <span>{lang.label}</span>
