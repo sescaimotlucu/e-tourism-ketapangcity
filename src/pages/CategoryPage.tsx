@@ -5,14 +5,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CategoryPage = () => {
   const { category } = useParams();
+  const { t } = useLanguage();
   
   const categoryData = {
     alam: {
-      title: "Wisata Alam",
-      description: "Jelajahi keindahan alam Ketapang yang memukau",
+      titleKey: "alamTitle",
+      descriptionKey: "alamDescription",
       color: "bg-green-forest",
       destinations: [
         {
@@ -22,7 +24,7 @@ const CategoryPage = () => {
           description: "Pantai indah dengan pemandangan sunset yang menawan",
           image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
           location: "Kendawangan",
-          duration: "4-6 jam"
+          duration: "4-6"
         },
         {
           id: 2,
@@ -31,7 +33,7 @@ const CategoryPage = () => {
           description: "Taman nasional dengan keanekaragaman hayati yang luar biasa",
           image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80",
           location: "Sukadana",
-          duration: "2-3 hari"
+          duration: "2-3"
         },
         {
           id: 3,
@@ -40,13 +42,13 @@ const CategoryPage = () => {
           description: "Air terjun tersembunyi di tengah hutan tropis",
           image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&q=80",
           location: "Sandai",
-          duration: "3-4 jam"
+          duration: "3-4"
         }
       ]
     },
     budaya: {
-      title: "Wisata Budaya",
-      description: "Temukan warisan budaya dan tradisi lokal Ketapang",
+      titleKey: "budayaTitle",
+      descriptionKey: "budayaDescription",
       color: "bg-red-soft",
       destinations: [
         {
@@ -56,7 +58,7 @@ const CategoryPage = () => {
           description: "Istana bersejarah Kesultanan Pontianak",
           image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&q=80",
           location: "Ketapang Kota",
-          duration: "2-3 jam"
+          duration: "2-3"
         },
         {
           id: 5,
@@ -65,13 +67,13 @@ const CategoryPage = () => {
           description: "Koleksi artefak sejarah dan budaya Ketapang",
           image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&q=80",
           location: "Ketapang Kota",
-          duration: "1-2 jam"
+          duration: "1-2"
         }
       ]
     },
     kuliner: {
-      title: "Wisata Kuliner",
-      description: "Nikmati kelezatan masakan khas Ketapang",
+      titleKey: "kulinerTitle", 
+      descriptionKey: "kulinerDescription",
       color: "bg-golden-beige",
       destinations: [
         {
@@ -81,7 +83,7 @@ const CategoryPage = () => {
           description: "Pusat kuliner tradisional dengan berbagai makanan khas",
           image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&q=80",
           location: "Ketapang Kota",
-          duration: "2-3 jam"
+          duration: "2-3"
         },
         {
           id: 7,
@@ -90,13 +92,13 @@ const CategoryPage = () => {
           description: "Mie khas Ketapang dengan kuah gurih dan topping melimpah",
           image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&q=80",
           location: "Berbagai lokasi",
-          duration: "1 jam"
+          duration: "1"
         }
       ]
     },
     tari: {
-      title: "Wisata Tari",
-      description: "Saksikan pertunjukan tari tradisional Ketapang",
+      titleKey: "tariTitle",
+      descriptionKey: "tariDescription", 
       color: "bg-red-dark",
       destinations: [
         {
@@ -106,7 +108,7 @@ const CategoryPage = () => {
           description: "Pertunjukan tari tradisional suku Dayak",
           image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=80",
           location: "Sandai",
-          duration: "2 jam"
+          duration: "2"
         },
         {
           id: 9,
@@ -115,7 +117,7 @@ const CategoryPage = () => {
           description: "Festival tahunan dengan berbagai pertunjukan tari",
           image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=80",
           location: "Ketapang Kota",
-          duration: "1 hari"
+          duration: "1"
         }
       ]
     }
@@ -126,7 +128,7 @@ const CategoryPage = () => {
   if (!currentCategory) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-2xl text-red-dark">Kategori tidak ditemukan</h1>
+        <h1 className="text-2xl text-red-dark">{t('notFound')}</h1>
       </div>
     );
   }
@@ -141,15 +143,15 @@ const CategoryPage = () => {
           <div className="container mx-auto px-4">
             <Link to="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Kembali ke Beranda
+              {t('kembaliKeBeranda')}
             </Link>
             
             <div className="max-w-2xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-                {currentCategory.title}
+                {t(currentCategory.titleKey)}
               </h1>
               <p className="text-xl text-white/90 animate-fade-in">
-                {currentCategory.description}
+                {t(currentCategory.descriptionKey)}
               </p>
             </div>
           </div>
@@ -162,7 +164,7 @@ const CategoryPage = () => {
               {currentCategory.destinations.map((destination, index) => (
                 <Card 
                   key={destination.id}
-                  className="group cursor-pointer overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-bounce-in border-0"
+                  className="group cursor-pointer overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-bounce-in border-0 h-full flex flex-col"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="relative h-48 overflow-hidden">
@@ -174,28 +176,30 @@ const CategoryPage = () => {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
                   </div>
                   
-                  <CardContent className="p-6 bg-white">
-                    <h3 className="text-xl font-bold text-red-dark mb-2 group-hover:text-red-soft transition-colors duration-300">
-                      {destination.name}
-                    </h3>
-                    <p className="text-green-forest/80 text-sm mb-4">
-                      {destination.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-xs text-green-forest/60 mb-4">
-                      <div className="flex items-center">
-                        <MapPin className="h-3 w-3 mr-1" />
-                        {destination.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="h-3 w-3 mr-1" />
-                        {destination.duration}
+                  <CardContent className="p-6 bg-white flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-red-dark mb-2 group-hover:text-red-soft transition-colors duration-300">
+                        {destination.name}
+                      </h3>
+                      <p className="text-green-forest/80 text-sm mb-4">
+                        {destination.description}
+                      </p>
+                      
+                      <div className="flex items-center justify-between text-xs text-green-forest/60 mb-4">
+                        <div className="flex items-center">
+                          <MapPin className="h-3 w-3 mr-1" />
+                          {destination.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="h-3 w-3 mr-1" />
+                          {destination.duration} {t('jam')}
+                        </div>
                       </div>
                     </div>
                     
-                    <Link to={`/destinasi/${destination.slug}`}>
+                    <Link to={`/destinasi/${destination.slug}`} className="mt-auto">
                       <Button className="w-full bg-red-soft hover:bg-red-dark text-white transition-colors duration-300">
-                        Lihat Detail
+                        {t('lihatDetail')}
                       </Button>
                     </Link>
                   </CardContent>

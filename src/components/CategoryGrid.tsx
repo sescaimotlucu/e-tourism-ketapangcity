@@ -83,7 +83,7 @@ const CategoryGrid = () => {
           {categories.map((category, index) => (
             <Link key={category.slug} to={`/kategori/${category.slug}`}>
               <Card 
-                className="group cursor-pointer overflow-hidden card-hover border-0 bg-white rounded-2xl animate-zoom-in h-full"
+                className="group cursor-pointer overflow-hidden card-hover border-0 bg-white rounded-2xl animate-zoom-in h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative h-64 overflow-hidden rounded-t-2xl">
@@ -136,7 +136,10 @@ const CategoryGrid = () => {
           <p className="text-green-forest/70 font-poppins text-lg mb-6">
             Siap memulai petualangan Anda?
           </p>
-          <button className="bg-gradient-to-r from-green-forest via-green-forest/90 to-green-forest/80 hover:from-green-forest/90 hover:via-green-forest hover:to-green-forest text-white font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button 
+            onClick={() => document.getElementById('destinasi')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-green-forest via-green-forest/90 to-green-forest/80 hover:from-green-forest/90 hover:via-green-forest hover:to-green-forest text-white font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
             Mulai Jelajahi Sekarang
           </button>
         </div>

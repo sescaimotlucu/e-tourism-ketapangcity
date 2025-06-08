@@ -40,7 +40,37 @@ const translations: Translations = {
     beranda: "Beranda",
     destinasi: "Destinasi",
     galeri: "Galeri",
-    kontak: "Kontak"
+    kontak: "Kontak",
+    
+    // Category Pages
+    kembaliKeBeranda: "Kembali ke Beranda",
+    alamTitle: "Wisata Alam",
+    alamDescription: "Jelajahi keindahan alam Ketapang yang memukau",
+    budayaTitle: "Wisata Budaya",
+    budayaDescription: "Temukan warisan budaya dan tradisi lokal Ketapang",
+    kulinerTitle: "Wisata Kuliner",
+    kulinerDescription: "Nikmati kelezatan masakan khas Ketapang",
+    tariTitle: "Wisata Tari",
+    tariDescription: "Saksikan pertunjukan tari tradisional Ketapang",
+    
+    // Destination Detail
+    kembaliKe: "Kembali ke",
+    tentangDestinasi: "Tentang Destinasi",
+    galeriFoto: "Galeri Foto",
+    fasilitas: "Fasilitas",
+    tipsBerkunjung: "Tips Berkunjung",
+    tertarikBerkunjung: "Tertarik Berkunjung?",
+    hubungiInfo: "Hubungi kami untuk informasi lebih lanjut",
+    hubungiSekarang: "Hubungi Sekarang",
+    lihatDetail: "Lihat Detail",
+    ulasan: "ulasan",
+    jam: "jam",
+    hari: "hari",
+    
+    // Common
+    loading: "Memuat...",
+    error: "Terjadi kesalahan",
+    notFound: "Tidak ditemukan"
   },
   EN: {
     // Hero Section
@@ -74,7 +104,37 @@ const translations: Translations = {
     beranda: "Home",
     destinasi: "Destinations",
     galeri: "Gallery",
-    kontak: "Contact"
+    kontak: "Contact",
+    
+    // Category Pages
+    kembaliKeBeranda: "Back to Home",
+    alamTitle: "Nature Tourism",
+    alamDescription: "Explore the stunning natural beauty of Ketapang",
+    budayaTitle: "Cultural Tourism",
+    budayaDescription: "Discover cultural heritage and local traditions of Ketapang",
+    kulinerTitle: "Culinary Tourism",
+    kulinerDescription: "Enjoy the delicious specialties of Ketapang",
+    tariTitle: "Dance Tourism",
+    tariDescription: "Witness traditional dance performances of Ketapang",
+    
+    // Destination Detail
+    kembaliKe: "Back to",
+    tentangDestinasi: "About Destination",
+    galeriFoto: "Photo Gallery",
+    fasilitas: "Facilities",
+    tipsBerkunjung: "Visiting Tips",
+    tertarikBerkunjung: "Interested in Visiting?",
+    hubungiInfo: "Contact us for more information",
+    hubungiSekarang: "Contact Now",
+    lihatDetail: "View Details",
+    ulasan: "reviews",
+    jam: "hours",
+    hari: "days",
+    
+    // Common
+    loading: "Loading...",
+    error: "An error occurred",
+    notFound: "Not found"
   },
   MY: {
     // Hero Section
@@ -108,7 +168,37 @@ const translations: Translations = {
     beranda: "Laman Utama",
     destinasi: "Destinasi",
     galeri: "Galeri",
-    kontak: "Hubungi"
+    kontak: "Hubungi",
+    
+    // Category Pages
+    kembaliKeBeranda: "Kembali ke Laman Utama",
+    alamTitle: "Pelancongan Alam",
+    alamDescription: "Terokai keindahan alam Ketapang yang memukau",
+    budayaTitle: "Pelancongan Budaya",
+    budayaDescription: "Temui warisan budaya dan tradisi tempatan Ketapang",
+    kulinerTitle: "Pelancongan Kuliner",
+    kulinerDescription: "Nikmati kelazatan masakan khas Ketapang",
+    tariTitle: "Pelancongan Tarian",
+    tariDescription: "Saksikan persembahan tarian tradisional Ketapang",
+    
+    // Destination Detail
+    kembaliKe: "Kembali ke",
+    tentangDestinasi: "Mengenai Destinasi",
+    galeriFoto: "Galeri Foto",
+    fasilitas: "Kemudahan",
+    tipsBerkunjung: "Tips Melawat",
+    tertarikBerkunjung: "Berminat untuk Melawat?",
+    hubungiInfo: "Hubungi kami untuk maklumat lanjut",
+    hubungiSekarang: "Hubungi Sekarang",
+    lihatDetail: "Lihat Butiran",
+    ulasan: "ulasan",
+    jam: "jam",
+    hari: "hari",
+    
+    // Common
+    loading: "Memuatkan...",
+    error: "Ralat berlaku",
+    notFound: "Tidak dijumpai"
   }
 };
 

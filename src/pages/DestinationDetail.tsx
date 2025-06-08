@@ -5,18 +5,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const DestinationDetail = () => {
   const { slug } = useParams();
+  const { t } = useLanguage();
   
   // Mock data - in real app this would come from API
   const destination = {
     name: "Pantai Muara Kendawangan",
-    category: "Wisata Alam",
+    category: t('wisataAlam'),
     description: "Pantai Muara Kendawangan adalah salah satu destinasi wisata pantai terpopuler di Kabupaten Ketapang. Pantai ini menawarkan pemandangan sunset yang menawan dengan hamparan pasir putih yang luas. Air lautnya yang jernih dan ombak yang tenang membuat pantai ini cocok untuk berenang dan bersantai bersama keluarga.",
     longDescription: "Berlokasi di muara Sungai Kendawangan, pantai ini memiliki keunikan tersendiri karena pertemuan antara air sungai dan air laut. Pengunjung dapat menikmati berbagai aktivitas seperti berenang, bermain voli pantai, atau sekadar bersantai menikmati pemandangan. Fasilitas yang tersedia meliputi warung makan, toilet, dan area parkir yang luas.",
     location: "Kendawangan, Ketapang",
-    duration: "4-6 jam",
+    duration: "4-6",
     rating: 4.8,
     reviews: 127,
     mainImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
@@ -62,7 +64,7 @@ const DestinationDetail = () => {
             <div className="container mx-auto px-4">
               <Link to="/kategori/alam" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali ke {destination.category}
+                {t('kembaliKe')} {destination.category}
               </Link>
               
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">
@@ -76,11 +78,11 @@ const DestinationDetail = () => {
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 mr-2" />
-                  {destination.duration}
+                  {destination.duration} {t('jam')}
                 </div>
                 <div className="flex items-center">
                   <Star className="h-4 w-4 mr-2 text-golden-beige" />
-                  {destination.rating} ({destination.reviews} ulasan)
+                  {destination.rating} ({destination.reviews} {t('ulasan')})
                 </div>
               </div>
             </div>
@@ -95,7 +97,7 @@ const DestinationDetail = () => {
               <div className="lg:col-span-2 space-y-8">
                 {/* Description */}
                 <div>
-                  <h2 className="text-3xl font-bold text-red-dark mb-6">Tentang Destinasi</h2>
+                  <h2 className="text-3xl font-bold text-red-dark mb-6">{t('tentangDestinasi')}</h2>
                   <p className="text-green-forest/80 text-lg leading-relaxed mb-4">
                     {destination.description}
                   </p>
@@ -108,7 +110,7 @@ const DestinationDetail = () => {
                 <div>
                   <h2 className="text-3xl font-bold text-red-dark mb-6 flex items-center">
                     <Camera className="h-8 w-8 mr-3" />
-                    Galeri Foto
+                    {t('galeriFoto')}
                   </h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {destination.gallery.map((image, index) => (
@@ -132,7 +134,7 @@ const DestinationDetail = () => {
                 {/* Facilities */}
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-red-dark mb-4">Fasilitas</h3>
+                    <h3 className="text-xl font-bold text-red-dark mb-4">{t('fasilitas')}</h3>
                     <ul className="space-y-2">
                       {destination.facilities.map((facility, index) => (
                         <li key={index} className="flex items-center text-green-forest/80">
@@ -147,7 +149,7 @@ const DestinationDetail = () => {
                 {/* Tips */}
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-red-dark mb-4">Tips Berkunjung</h3>
+                    <h3 className="text-xl font-bold text-red-dark mb-4">{t('tipsBerkunjung')}</h3>
                     <ul className="space-y-3">
                       {destination.tips.map((tip, index) => (
                         <li key={index} className="text-green-forest/80 text-sm">
@@ -161,12 +163,12 @@ const DestinationDetail = () => {
                 {/* CTA */}
                 <Card className="bg-gradient-to-br from-red-soft to-red-dark text-white">
                   <CardContent className="p-6 text-center">
-                    <h3 className="text-lg font-bold mb-2">Tertarik Berkunjung?</h3>
+                    <h3 className="text-lg font-bold mb-2">{t('tertarikBerkunjung')}</h3>
                     <p className="text-white/90 text-sm mb-4">
-                      Hubungi kami untuk informasi lebih lanjut
+                      {t('hubungiInfo')}
                     </p>
                     <Button variant="outline" className="border-white text-white hover:bg-white hover:text-red-dark">
-                      Hubungi Sekarang
+                      {t('hubungiSekarang')}
                     </Button>
                   </CardContent>
                 </Card>
