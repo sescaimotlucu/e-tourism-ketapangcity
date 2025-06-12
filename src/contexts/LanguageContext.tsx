@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface Translations {
@@ -8,7 +7,7 @@ interface Translations {
 }
 
 const translations: Translations = {
-  ID: {
+  id: {
     // Hero Section
     heroTitle1: "Keindahan Alam Ketapang",
     heroTitle2: "Warisan Budaya Nusantara",
@@ -35,6 +34,7 @@ const translations: Translations = {
     kulinerCount: "+ Kuliner Khas", 
     pertunjukanCount: "+ Pertunjukan",
     lihatSemua: "Lihat Semua",
+    lihatGaleri: "Lihat Galeri",
     
     // Navigation
     beranda: "Beranda",
@@ -104,7 +104,7 @@ const translations: Translations = {
     selengkapnya: "Selengkapnya",
     tutup: "Tutup"
   },
-  EN: {
+  en: {
     // Hero Section
     heroTitle1: "Natural Beauty of Ketapang",
     heroTitle2: "Cultural Heritage of the Archipelago",
@@ -131,6 +131,7 @@ const translations: Translations = {
     kulinerCount: "+ Local Culinary",
     pertunjukanCount: "+ Performances",
     lihatSemua: "View All",
+    lihatGaleri: "View Gallery",
     
     // Navigation
     beranda: "Home",
@@ -200,7 +201,7 @@ const translations: Translations = {
     selengkapnya: "Read More",
     tutup: "Close"
   },
-  MY: {
+  my: {
     // Hero Section
     heroTitle1: "Keindahan Alam Ketapang",
     heroTitle2: "Warisan Budaya Nusantara",
@@ -227,6 +228,7 @@ const translations: Translations = {
     kulinerCount: "+ Kuliner Tempatan",
     pertunjukanCount: "+ Persembahan",
     lihatSemua: "Lihat Semua",
+    lihatGaleri: "Lihat Galeri",
     
     // Navigation
     beranda: "Laman Utama",

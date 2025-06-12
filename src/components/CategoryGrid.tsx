@@ -54,36 +54,50 @@ const CategoryGrid = () => {
     }
   ];
 
+  const handleGalleryClick = () => {
+    // Scroll to a specific section or navigate to gallery page
+    const gallerySection = document.getElementById('galeri');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If no gallery section exists, scroll to testimonials or create a placeholder
+      const testimonialsSection = document.querySelector('[data-section="testimonials"]');
+      if (testimonialsSection) {
+        testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <section id="destinasi" className="py-24 bg-gradient-to-br from-golden-beige/10 via-green-forest/5 to-red-soft/5 relative overflow-hidden">
+    <section id="destinasi" className="py-28 bg-gradient-to-br from-golden-beige/10 via-green-forest/5 to-red-soft/5 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-golden-beige/20 to-green-forest/20 rounded-full blur-xl animate-float"></div>
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-red-soft/20 to-golden-beige/20 rounded-full blur-xl animate-float delay-1000"></div>
       
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <div className="animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-red-dark mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-red-dark mb-8 leading-tight">
               {t('categoriesTitle')}
             </h2>
           </div>
           <div className="animate-fade-in-up delay-300">
-            <p className="text-lg md:text-xl text-green-forest max-w-4xl mx-auto leading-relaxed font-poppins font-light">
+            <p className="text-lg md:text-xl text-green-forest max-w-4xl mx-auto leading-relaxed font-poppins font-light mb-4">
               {t('categoriesSubtitle')}
             </p>
           </div>
           
           {/* Decorative line */}
-          <div className="mt-8 flex justify-center animate-fade-in-up delay-500">
+          <div className="mt-10 flex justify-center animate-fade-in-up delay-500">
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-golden-beige to-transparent rounded-full"></div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {categories.map((category, index) => (
             <Link key={category.slug} to={`/kategori/${category.slug}`}>
               <Card 
-                className="group cursor-pointer overflow-hidden card-hover border-0 bg-white rounded-2xl animate-zoom-in h-full flex flex-col"
+                className="group cursor-pointer overflow-hidden card-hover border-0 bg-white rounded-2xl animate-zoom-in h-full flex flex-col min-h-[450px]"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative h-64 overflow-hidden rounded-t-2xl">
@@ -99,7 +113,7 @@ const CategoryGrid = () => {
                     <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-2xl">
                       <category.icon className="h-10 w-10 text-white animate-float" />
                     </div>
-                    <h3 className="text-xl font-playfair font-bold text-white mb-3 drop-shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-xl font-playfair font-bold text-white mb-3 drop-shadow-lg group-hover:scale-105 transition-transform duration-300 leading-tight">
                       {t(category.titleKey)}
                     </h3>
                     <span className="text-sm font-poppins font-semibold text-white bg-white/20 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
@@ -112,7 +126,7 @@ const CategoryGrid = () => {
                 </div>
                 
                 <CardContent className="p-6 bg-white rounded-b-2xl flex-1 flex flex-col">
-                  <p className="text-green-forest/80 text-sm leading-relaxed mb-6 font-poppins flex-1">
+                  <p className="text-green-forest/80 text-sm leading-relaxed mb-6 font-poppins flex-1 line-clamp-3">
                     {t(category.descriptionKey)}
                   </p>
                   
@@ -132,16 +146,24 @@ const CategoryGrid = () => {
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-20 animate-fade-in-up delay-700">
+        <div className="text-center mt-24 animate-fade-in-up delay-700">
           <p className="text-green-forest/70 font-poppins text-lg mb-6">
             {t('tertarikBerkunjung')}
           </p>
-          <button 
-            onClick={() => document.getElementById('destinasi')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-green-forest via-green-forest/90 to-green-forest/80 hover:from-green-forest/90 hover:via-green-forest hover:to-green-forest text-white font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            {t('exploreNow')}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              onClick={() => document.getElementById('destinasi')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-green-forest via-green-forest/90 to-green-forest/80 hover:from-green-forest/90 hover:via-green-forest hover:to-green-forest text-white font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              {t('exploreNow')}
+            </button>
+            <button 
+              onClick={handleGalleryClick}
+              className="bg-gradient-to-r from-golden-beige via-golden-beige/90 to-golden-beige/80 hover:from-golden-beige/90 hover:via-golden-beige hover:to-golden-beige text-red-dark font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              {t('lihatGaleri') || 'Lihat Galeri'}
+            </button>
+          </div>
         </div>
       </div>
     </section>
