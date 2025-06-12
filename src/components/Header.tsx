@@ -12,7 +12,7 @@ const Header = () => {
 
   const navItems = [
     { label: t('beranda'), href: '#home', isLink: false },
-    { label: t('destinasi'), href: '#destinasi', isLink: false },
+    { label: t('destinasi'), href: '#kategoriWisata', isLink: false },
     { label: t('galeri'), href: '/galeri', isLink: true },
     { label: t('kontak'), href: '#kontak', isLink: false },
   ];
@@ -69,7 +69,9 @@ const Header = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="relative text-white hover:text-golden-beige transition-all duration-300 font-poppins font-medium text-lg group animate-fade-in flex items-center"
+                  className={`relative text-white hover:text-golden-beige transition-all duration-300 font-poppins font-medium text-lg group animate-fade-in flex items-center ${
+                    location.pathname === item.href ? 'text-golden-beige font-bold' : ''
+                  }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label === t('galeri') && <Camera className="h-4 w-4 mr-2" />}
@@ -140,7 +142,9 @@ const Header = () => {
                   <Link
                     key={item.label}
                     to={item.href}
-                    className="flex items-center px-6 py-3 text-white hover:text-golden-beige hover:bg-red-soft/20 transition-all duration-300 font-poppins font-medium rounded-xl mx-2 animate-fade-in-left"
+                    className={`flex items-center px-6 py-3 text-white hover:text-golden-beige hover:bg-red-soft/20 transition-all duration-300 font-poppins font-medium rounded-xl mx-2 animate-fade-in-left ${
+                      location.pathname === item.href ? 'text-golden-beige bg-red-soft/20' : ''
+                    }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => setIsMenuOpen(false)}
                   >

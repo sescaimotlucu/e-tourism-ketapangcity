@@ -54,6 +54,9 @@ const translations = {
     bagikan: "Bagikan",
     lihatAsli: "Lihat Asli",
     tidakAdaGambar: "Tidak ada gambar ditemukan untuk kategori ini",
+    galeriTerpopuler: "Galeri Favorit Pengunjung",
+    galeriTerpopulerDesc: "Foto-foto paling banyak dilihat dan disukai oleh pengunjung website",
+    kenangan: "Kenangan Terbaik dari Ketapang",
   },
   EN: {
     // Navigation
@@ -99,6 +102,9 @@ const translations = {
     bagikan: "Share",
     lihatAsli: "View Original",
     tidakAdaGambar: "No images found for this category",
+    galeriTerpopuler: "Visitor's Favorite Gallery",
+    galeriTerpopulerDesc: "Most viewed and liked photos by website visitors",
+    kenangan: "Best Memories from Ketapang",
   },
   MY: {
     // Navigation
@@ -144,6 +150,9 @@ const translations = {
     bagikan: "Kongsi",
     lihatAsli: "Lihat Asal",
     tidakAdaGambar: "Tiada gambar dijumpai untuk kategori ini",
+    galeriTerpopuler: "Galeri Kegemaran Pelawat",
+    galeriTerpopulerDesc: "Foto paling banyak dilihat dan disukai oleh pelawat laman web",
+    kenangan: "Kenangan Terbaik dari Ketapang",
   }
 };
 
