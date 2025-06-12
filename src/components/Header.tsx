@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { Menu, X, MapPin, Globe, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { currentLanguage, setLanguage, t } = useLanguage();
+  const location = useLocation();
 
   const navItems = [
     { label: t('beranda'), href: '#home', isLink: false },
@@ -31,10 +32,15 @@ const Header = () => {
       // Let the Link component handle it
       setIsMenuOpen(false);
     } else {
-      // Scroll to section
-      const element = document.getElementById(item.href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      // If we're not on the home page, navigate to home first then scroll
+      if (location.pathname !== '/') {
+        window.location.href = `/${item.href}`;
+      } else {
+        // Scroll to section on current page
+        const element = document.getElementById(item.href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
       setIsMenuOpen(false);
     }
