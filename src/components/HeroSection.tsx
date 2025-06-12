@@ -72,18 +72,18 @@ const HeroSection = () => {
       ))}
 
       {/* Floating Elements */}
-      <div className="absolute top-24 right-12 text-white/15 animate-float">
+      <div className="absolute top-32 right-12 text-white/15 animate-float">
         <MapPin className="h-20 w-20" style={{ animationDelay: '0.5s' }} />
       </div>
       <div className="absolute bottom-32 left-12 text-white/10 animate-float">
         <div className="w-24 h-24 border-2 border-current rounded-full" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+      {/* Content - Adjusted positioning to avoid navbar overlap */}
+      <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-24">
         <div className="max-w-6xl">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-poppins font-bold mb-6 leading-tight tracking-wide">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold mb-6 leading-tight tracking-wide">
               <span className="text-white drop-shadow-2xl">
                 {t(slides[currentSlide].titleKey)}
               </span>
@@ -91,7 +91,7 @@ const HeroSection = () => {
           </div>
           
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 text-neutral-200 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 text-neutral-200 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide">
               {t(slides[currentSlide].subtitleKey)}
             </p>
           </div>
@@ -120,15 +120,15 @@ const HeroSection = () => {
           {/* Enhanced Stats */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
             <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-3xl md:text-5xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
+              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
               <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Tourist Destinations</div>
             </div>
             <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-3xl md:text-5xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
+              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
               <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Cultural Heritage</div>
             </div>
             <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-3xl md:text-5xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">1000+</div>
+              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">1000+</div>
               <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Happy Visitors</div>
             </div>
           </div>

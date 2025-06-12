@@ -8,6 +8,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import DestinationDetail from "./pages/DestinationDetail";
+import GalleryPage from "./pages/GalleryPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminDestinasiPage from "./pages/admin/AdminDestinasiPage";
 import AdminTestimoniPage from "./pages/admin/AdminTestimoniPage";
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/kategori/:category" element={<CategoryPage />} />
             <Route path="/destinasi/:slug" element={<DestinationDetail />} />
+            <Route path="/galeri" element={<GalleryPage />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/destinasi" element={<AdminDestinasiPage />} />
             <Route path="/admin/testimoni" element={<AdminTestimoniPage />} />
