@@ -63,12 +63,12 @@ const CategoryGrid = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-20">
           <div className="animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-red-dark mb-6 text-shadow-lg">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-red-dark mb-6">
               {t('categoriesTitle')}
             </h2>
           </div>
           <div className="animate-fade-in-up delay-300">
-            <p className="text-lg md:text-xl text-green-forest max-w-3xl mx-auto leading-relaxed font-poppins font-light">
+            <p className="text-lg md:text-xl text-green-forest max-w-4xl mx-auto leading-relaxed font-poppins font-light">
               {t('categoriesSubtitle')}
             </p>
           </div>
@@ -103,7 +103,7 @@ const CategoryGrid = () => {
                       {t(category.titleKey)}
                     </h3>
                     <span className="text-sm font-poppins font-semibold text-white bg-white/20 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
-                      {category.count}{t(category.countKey)}
+                      {category.count} {t(category.countKey)}
                     </span>
                   </div>
 
@@ -134,13 +134,13 @@ const CategoryGrid = () => {
         {/* Call to action */}
         <div className="text-center mt-20 animate-fade-in-up delay-700">
           <p className="text-green-forest/70 font-poppins text-lg mb-6">
-            Siap memulai petualangan Anda?
+            {t('tertarikBerkunjung')}
           </p>
           <button 
             onClick={() => document.getElementById('destinasi')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-to-r from-green-forest via-green-forest/90 to-green-forest/80 hover:from-green-forest/90 hover:via-green-forest hover:to-green-forest text-white font-poppins font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Mulai Jelajahi Sekarang
+            {t('exploreNow')}
           </button>
         </div>
       </div>
