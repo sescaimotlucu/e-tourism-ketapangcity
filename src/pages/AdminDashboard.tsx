@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
-import { BarChart, Users, MapPin, MessageSquare, Calendar, Settings, LogOut, Menu, X } from 'lucide-react';
+import { BarChart, Users, MapPin, MessageSquare, Calendar, Settings, LogOut, Menu, X, Heart, Upload } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import AdminHeader from '@/components/admin/AdminHeader';
 
@@ -17,30 +18,30 @@ const AdminDashboard = () => {
       color: "bg-green-forest"
     },
     {
-      title: "Pengunjung Bulan Ini",
-      value: "12,543",
-      icon: Users,
+      title: "Konten Budaya",
+      value: "18",
+      icon: Heart,
       color: "bg-red-soft"
-    },
-    {
-      title: "Testimoni Pending",
-      value: "8",
-      icon: MessageSquare,
-      color: "bg-golden-beige"
     },
     {
       title: "Event Aktif",
       value: "3",
       icon: Calendar,
+      color: "bg-golden-beige"
+    },
+    {
+      title: "Media Files",
+      value: "156",
+      icon: Upload,
       color: "bg-red-dark"
     }
   ];
 
   const recentActivities = [
     { action: "Destinasi baru ditambahkan", item: "Air Terjun Riam Pangar", time: "2 jam lalu" },
-    { action: "Testimoni disetujui", item: "Sarah Wijaya", time: "4 jam lalu" },
+    { action: "Konten budaya diperbarui", item: "Tari Jepin", time: "4 jam lalu" },
     { action: "Event dibuat", item: "Festival Budaya Ketapang", time: "1 hari lalu" },
-    { action: "Galeri diperbarui", item: "Pantai Muara Kendawangan", time: "2 hari lalu" }
+    { action: "Media diupload", item: "Foto Pantai Kendawangan", time: "2 hari lalu" }
   ];
 
   return (
@@ -103,22 +104,30 @@ const AdminDashboard = () => {
                 <CardTitle className="text-red-dark">Aksi Cepat</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button className="w-full bg-red-soft hover:bg-red-dark text-white justify-start">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  Tambah Destinasi Baru
-                </Button>
-                <Button variant="outline" className="w-full border-green-forest text-green-forest hover:bg-green-forest hover:text-white justify-start">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Buat Event Baru
-                </Button>
-                <Button variant="outline" className="w-full border-golden-beige text-golden-beige hover:bg-golden-beige hover:text-red-dark justify-start">
-                  <MessageSquare className="h-4 w-4 mr-2" />
-                  Review Testimoni
-                </Button>
-                <Button variant="outline" className="w-full border-red-dark text-red-dark hover:bg-red-dark hover:text-white justify-start">
-                  <Settings className="h-4 w-4 mr-2" />
-                  Pengaturan Website
-                </Button>
+                <Link to="/admin/destinasi">
+                  <Button className="w-full bg-red-soft hover:bg-red-dark text-white justify-start">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    Kelola Destinasi Wisata
+                  </Button>
+                </Link>
+                <Link to="/admin/budaya">
+                  <Button variant="outline" className="w-full border-red-soft text-red-soft hover:bg-red-soft hover:text-white justify-start">
+                    <Heart className="h-4 w-4 mr-2" />
+                    Kelola Konten Budaya
+                  </Button>
+                </Link>
+                <Link to="/admin/event">
+                  <Button variant="outline" className="w-full border-green-forest text-green-forest hover:bg-green-forest hover:text-white justify-start">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Kelola Event Budaya
+                  </Button>
+                </Link>
+                <Link to="/admin/media">
+                  <Button variant="outline" className="w-full border-golden-beige text-golden-beige hover:bg-golden-beige hover:text-red-dark justify-start">
+                    <Upload className="h-4 w-4 mr-2" />
+                    Upload Media Budaya
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
