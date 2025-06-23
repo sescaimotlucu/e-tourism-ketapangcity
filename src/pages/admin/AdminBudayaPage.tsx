@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Heart, Plus, Edit, Trash2, Image, Video } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -53,8 +52,8 @@ const AdminBudayaPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    category: 'tari' as const,
-    mediaType: 'image' as const,
+    category: 'tari' as 'tari' | 'musik' | 'tradisi' | 'kerajinan' | 'cerita',
+    mediaType: 'image' as 'image' | 'video',
     mediaUrl: ''
   });
 
