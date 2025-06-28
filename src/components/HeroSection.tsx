@@ -65,9 +65,9 @@ const HeroSection = () => {
               className="w-full h-full object-cover scale-110"
             />
           </div>
-          {/* Soft dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 via-transparent to-transparent"></div>
+          {/* Enhanced gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-transparent"></div>
         </div>
       ))}
 
@@ -79,57 +79,57 @@ const HeroSection = () => {
         <div className="w-24 h-24 border-2 border-current rounded-full" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      {/* Content - Adjusted positioning to avoid navbar overlap */}
+      {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-24">
         <div className="max-w-6xl">
           <div className="animate-fade-in-up">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold mb-6 leading-tight tracking-wide">
-              <span className="text-white drop-shadow-2xl">
-                {t(slides[currentSlide].titleKey)}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold mb-6 leading-tight tracking-wide">
+              <span className="text-white drop-shadow-2xl bg-gradient-to-r from-white via-golden-beige to-white bg-clip-text">
+                Seni & Budaya Tradisional
               </span>
             </h1>
           </div>
           
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 text-neutral-200 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide">
-              {t(slides[currentSlide].subtitleKey)}
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 text-neutral-200 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide">
+              Saksikan pertunjukan seni tradisional yang memukau dan rasakan kekayaan budaya Ketapang
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button 
               size="lg" 
-              onClick={() => scrollToSection('destinasi')}
-              className="bg-gradient-to-r from-green-forest/90 via-green-forest to-green-forest/80 hover:from-green-forest hover:via-green-forest/90 hover:to-green-forest/70 text-white px-10 py-6 text-lg font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-green-forest/30 border-0 group"
+              onClick={() => scrollToSection('kategoriWisata')}
+              className="bg-gradient-to-r from-green-forest/90 via-green-forest to-green-forest/80 hover:from-green-forest hover:via-green-forest/90 hover:to-green-forest/70 text-white px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-green-forest/30 border-0 group backdrop-blur-sm"
             >
               <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-              {t('exploreNow')}
+              Jelajahi Sekarang
             </Button>
             
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => scrollToSection('galeri')}
-              className="border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white px-10 py-6 text-lg font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-white/20 group"
+              onClick={() => scrollToSection('acara')}
+              className="border-2 border-white/40 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white hover:border-white/60 px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-white/20 group"
             >
-              {t('learnMore')}
+              Pelajari Lebih Lanjut
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
 
-          {/* Enhanced Stats */}
+          {/* Enhanced Stats with glassmorphism */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-            <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
-              <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Tourist Destinations</div>
+            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-golden-beige/20 transition-all duration-500 hover:scale-105">
+              <div className="text-3xl md:text-5xl font-playfair font-bold text-golden-beige mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">50+</div>
+              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Destinasi Wisata</div>
             </div>
-            <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
-              <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Cultural Heritage</div>
+            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-red-soft/20 transition-all duration-500 hover:scale-105">
+              <div className="text-3xl md:text-5xl font-playfair font-bold text-red-soft mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">15+</div>
+              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Warisan Budaya</div>
             </div>
-            <div className="text-center group backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-              <div className="text-2xl md:text-4xl font-poppins font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300">1000+</div>
-              <div className="text-sm md:text-base font-poppins text-neutral-200 tracking-wide">Happy Visitors</div>
+            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-green-forest/20 transition-all duration-500 hover:scale-105">
+              <div className="text-3xl md:text-5xl font-playfair font-bold text-green-forest mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">1000+</div>
+              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Pengunjung Puas</div>
             </div>
           </div>
         </div>
