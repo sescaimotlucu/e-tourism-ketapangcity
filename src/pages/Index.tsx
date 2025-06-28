@@ -7,18 +7,32 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import NewsSection from '@/components/NewsSection';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import { EventsSection } from '@/components/EventsSection';
+import { MapSection } from '@/components/MapSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-golden-beige/5 via-green-forest/5 to-red-soft/5">
       <Header />
       <main>
-        <HeroSection />
-        <CategoryGrid />
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="kategoriWisata">
+          <CategoryGrid />
+        </section>
         <StatisticsSection />
         <TestimonialsSection />
+        <section id="acara">
+          <EventsSection />
+        </section>
         <NewsSection />
-        <ContactForm />
+        <section id="peta">
+          <MapSection />
+        </section>
+        <section id="kontak">
+          <ContactForm />
+        </section>
       </main>
       <Footer />
     </div>

@@ -16,6 +16,10 @@ const translations = {
     destinasi: "Destinasi",
     galeri: "Galeri",
     kontak: "Kontak",
+    tentang: "Tentang",
+    artikel: "Artikel",
+    peta: "Peta",
+    acara: "Acara",
     
     // Hero Section
     heroTitle1: "Warisan Budaya Nusantara",
@@ -37,7 +41,7 @@ const translations = {
     alamDesc: "Jelajahi keindahan alam Ketapang dengan hutan tropis, pantai eksotis, dan air terjun yang memukau",
     budayaDesc: "Temukan warisan budaya Melayu dan Dayak melalui bangunan bersejarah dan tradisi turun temurun",
     kulinerDesc: "Nikmati cita rasa autentik kuliner Ketapang dengan rempah khas Kalimantan Barat",
-    tariDesc: "Saksikan keanggunan tari tradisional Jepin dan Monong yang sarat makna budaya",
+    tariDesc: "Saksikan keanggunan tarian tradisional Jepin dan Monong yang sarat makna budaya",
     destinasiCount: "Destinasi",
     situsCount: "Situs Bersejarah",
     kulinerCount: "Kuliner Khas",
@@ -57,6 +61,97 @@ const translations = {
     galeriTerpopuler: "Galeri Favorit Pengunjung",
     galeriTerpopulerDesc: "Foto-foto paling banyak dilihat dan disukai oleh pengunjung website",
     kenangan: "Kenangan Terbaik dari Ketapang",
+    
+    // Statistics
+    statisticsTitle: "Ketapang dalam Angka",
+    statisticsDesc: "Data terkini mengenai pariwisata dan budaya Ketapang",
+    pengunjungTahun: "Pengunjung/Tahun",
+    destinasiAktif: "Destinasi Aktif",
+    eventBudaya: "Event Budaya",
+    komunitasLokal: "Komunitas Lokal",
+    
+    // Testimonials
+    testimonialsTitle: "Cerita Pengunjung",
+    testimonialsDesc: "Dengarkan pengalaman tak terlupakan dari para wisatawan",
+    
+    // News & Articles
+    newsTitle: "Berita & Artikel Terkini",
+    newsDesc: "Informasi terbaru seputar wisata dan budaya Ketapang",
+    bacaSelengkapnya: "Baca Selengkapnya",
+    
+    // Contact
+    contactTitle: "Hubungi Kami",
+    contactDesc: "Ada pertanyaan? Jangan ragu untuk menghubungi kami",
+    nama: "Nama Lengkap",
+    email: "Email",
+    pesan: "Pesan",
+    kirimPesan: "Kirim Pesan",
+    alamat: "Alamat",
+    telepon: "Telepon",
+    jamOperasional: "Jam Operasional",
+    seninJumat: "Senin - Jumat: 08:00 - 17:00",
+    sabtuMinggu: "Sabtu - Minggu: 09:00 - 15:00",
+    
+    // Detail Pages
+    tentangDestinasi: "Tentang Destinasi",
+    galeriFoto: "Galeri Foto",
+    fasilitas: "Fasilitas",
+    tipsBerkunjung: "Tips Berkunjung",
+    kembaliKe: "Kembali ke",
+    kembaliKeBeranda: "Kembali ke Beranda",
+    jam: "jam",
+    ulasan: "ulasan",
+    lihatDetail: "Lihat Detail",
+    hubungiInfo: "Hubungi kami untuk informasi lebih lanjut",
+    hubungiSekarang: "Hubungi Sekarang",
+    notFound: "Halaman Tidak Ditemukan",
+    
+    // Map
+    petaLokasi: "Peta Lokasi",
+    petaDesc: "Temukan lokasi destinasi wisata dan budaya Ketapang",
+    
+    // Events
+    eventTitle: "Acara & Festival Budaya",
+    eventDesc: "Jadwal acara budaya dan festival tradisional Ketapang",
+    tanggal: "Tanggal",
+    waktu: "Waktu",
+    lokasi: "Lokasi",
+    tiketMasuk: "Tiket Masuk",
+    gratis: "Gratis",
+    
+    // Footer
+    footerDesc: "Portal resmi pariwisata dan budaya Kabupaten Ketapang, Kalimantan Barat",
+    linkCepat: "Link Cepat",
+    informasi: "Informasi",
+    sosialMedia: "Media Sosial",
+    hargaTiket: "Harga Tiket",
+    caraMenuju: "Cara Menuju",
+    cuaca: "Cuaca",
+    
+    // Admin specific
+    dashboard: "Dashboard",
+    kelola: "Kelola",
+    tambah: "Tambah",
+    edit: "Edit",
+    hapus: "Hapus",
+    simpan: "Simpan",
+    batal: "Batal",
+    upload: "Upload",
+    kategori: "Kategori",
+    deskripsi: "Deskripsi",
+    foto: "Foto",
+    video: "Video",
+    status: "Status",
+    aktif: "Aktif",
+    nonaktif: "Non-aktif",
+    
+    // Loading & Messages
+    memuat: "Memuat...",
+    berhasil: "Berhasil",
+    gagal: "Gagal",
+    konfirmasi: "Konfirmasi",
+    yakin: "Apakah Anda yakin?",
+    tidakBisaDibatalkan: "Tindakan ini tidak dapat dibatalkan",
   },
   EN: {
     // Navigation
@@ -64,6 +159,10 @@ const translations = {
     destinasi: "Destinations",
     galeri: "Gallery",
     kontak: "Contact",
+    tentang: "About",
+    artikel: "Articles",
+    peta: "Map",
+    acara: "Events",
     
     // Hero Section
     heroTitle1: "Indonesian Cultural Heritage",
@@ -105,6 +204,97 @@ const translations = {
     galeriTerpopuler: "Visitor's Favorite Gallery",
     galeriTerpopulerDesc: "Most viewed and liked photos by website visitors",
     kenangan: "Best Memories from Ketapang",
+    
+    // Statistics
+    statisticsTitle: "Ketapang in Numbers",
+    statisticsDesc: "Latest data on Ketapang tourism and culture",
+    pengunjungTahun: "Visitors/Year",
+    destinasiAktif: "Active Destinations",
+    eventBudaya: "Cultural Events",
+    komunitasLokal: "Local Communities",
+    
+    // Testimonials
+    testimonialsTitle: "Visitor Stories",
+    testimonialsDesc: "Listen to unforgettable experiences from travelers",
+    
+    // News & Articles
+    newsTitle: "Latest News & Articles",
+    newsDesc: "Latest information about Ketapang tourism and culture",
+    bacaSelengkapnya: "Read More",
+    
+    // Contact
+    contactTitle: "Contact Us",
+    contactDesc: "Have questions? Don't hesitate to contact us",
+    nama: "Full Name",
+    email: "Email",
+    pesan: "Message",
+    kirimPesan: "Send Message",
+    alamat: "Address",
+    telepon: "Phone",
+    jamOperasional: "Operating Hours",
+    seninJumat: "Monday - Friday: 08:00 - 17:00",
+    sabtuMinggu: "Saturday - Sunday: 09:00 - 15:00",
+    
+    // Detail Pages
+    tentangDestinasi: "About Destination",
+    galeriFoto: "Photo Gallery",
+    fasilitas: "Facilities",
+    tipsBerkunjung: "Visiting Tips",
+    kembaliKe: "Back to",
+    kembaliKeBeranda: "Back to Home",
+    jam: "hours",
+    ulasan: "reviews",
+    lihatDetail: "View Details",
+    hubungiInfo: "Contact us for more information",
+    hubungiSekarang: "Contact Now",
+    notFound: "Page Not Found",
+    
+    // Map
+    petaLokasi: "Location Map",
+    petaDesc: "Find locations of Ketapang tourism and cultural destinations",
+    
+    // Events
+    eventTitle: "Cultural Events & Festivals",
+    eventDesc: "Schedule of cultural events and traditional festivals in Ketapang",
+    tanggal: "Date",
+    waktu: "Time",
+    lokasi: "Location",
+    tiketMasuk: "Entrance Ticket",
+    gratis: "Free",
+    
+    // Footer
+    footerDesc: "Official tourism and culture portal of Ketapang Regency, West Kalimantan",
+    linkCepat: "Quick Links",
+    informasi: "Information",
+    sosialMedia: "Social Media",
+    hargaTiket: "Ticket Price",
+    caraMenuju: "How to Get There",
+    cuaca: "Weather",
+    
+    // Admin specific
+    dashboard: "Dashboard",
+    kelola: "Manage",
+    tambah: "Add",
+    edit: "Edit",
+    hapus: "Delete",
+    simpan: "Save",
+    batal: "Cancel",
+    upload: "Upload",
+    kategori: "Category",
+    deskripsi: "Description",
+    foto: "Photo",
+    video: "Video",
+    status: "Status",
+    aktif: "Active",
+    nonaktif: "Inactive",
+    
+    // Loading & Messages
+    memuat: "Loading...",
+    berhasil: "Success",
+    gagal: "Failed",
+    konfirmasi: "Confirmation",
+    yakin: "Are you sure?",
+    tidakBisaDibatalkan: "This action cannot be undone",
   },
   MY: {
     // Navigation
@@ -112,6 +302,10 @@ const translations = {
     destinasi: "Destinasi",
     galeri: "Galeri",
     kontak: "Hubungi",
+    tentang: "Tentang",
+    artikel: "Artikel",
+    peta: "Peta",
+    acara: "Acara",
     
     // Hero Section
     heroTitle1: "Warisan Budaya Nusantara",
@@ -153,6 +347,97 @@ const translations = {
     galeriTerpopuler: "Galeri Kegemaran Pelawat",
     galeriTerpopulerDesc: "Foto paling banyak dilihat dan disukai oleh pelawat laman web",
     kenangan: "Kenangan Terbaik dari Ketapang",
+    
+    // Statistics
+    statisticsTitle: "Ketapang dalam Nombor",
+    statisticsDesc: "Data terkini mengenai pelancongan dan budaya Ketapang",
+    pengunjungTahun: "Pelawat/Tahun",
+    destinasiAktif: "Destinasi Aktif",
+    eventBudaya: "Acara Budaya",
+    komunitasLokal: "Komuniti Tempatan",
+    
+    // Testimonials
+    testimonialsTitle: "Cerita Pelawat",
+    testimonialsDesc: "Dengar pengalaman tak terlupakan dari para pelancong",
+    
+    // News & Articles
+    newsTitle: "Berita & Artikel Terkini",
+    newsDesc: "Maklumat terbaru mengenai pelancongan dan budaya Ketapang",
+    bacaSelengkapnya: "Baca Selanjutnya",
+    
+    // Contact
+    contactTitle: "Hubungi Kami",
+    contactDesc: "Ada soalan? Jangan teragak-agak untuk hubungi kami",
+    nama: "Nama Penuh",
+    email: "E-mel",
+    pesan: "Mesej",
+    kirimPesan: "Hantar Mesej",
+    alamat: "Alamat",
+    telepon: "Telefon",
+    jamOperasional: "Waktu Operasi",
+    seninJumat: "Isnin - Jumaat: 08:00 - 17:00",
+    sabtuMinggu: "Sabtu - Ahad: 09:00 - 15:00",
+    
+    // Detail Pages
+    tentangDestinasi: "Tentang Destinasi",
+    galeriFoto: "Galeri Foto",
+    fasilitas: "Kemudahan",
+    tipsBerkunjung: "Tips Melawat",
+    kembaliKe: "Kembali ke",
+    kembaliKeBeranda: "Kembali ke Laman Utama",
+    jam: "jam",
+    ulasan: "ulasan",
+    lihatDetail: "Lihat Butiran",
+    hubungiInfo: "Hubungi kami untuk maklumat lanjut",
+    hubungiSekarang: "Hubungi Sekarang",
+    notFound: "Halaman Tidak Dijumpai",
+    
+    // Map
+    petaLokasi: "Peta Lokasi",
+    petaDesc: "Cari lokasi destinasi pelancongan dan budaya Ketapang",
+    
+    // Events
+    eventTitle: "Acara & Festival Budaya",
+    eventDesc: "Jadual acara budaya dan festival tradisional Ketapang",
+    tanggal: "Tarikh",
+    waktu: "Masa",
+    lokasi: "Lokasi",
+    tiketMasuk: "Tiket Masuk",
+    gratis: "Percuma",
+    
+    // Footer
+    footerDesc: "Portal rasmi pelancongan dan budaya Kabupaten Ketapang, Kalimantan Barat",
+    linkCepat: "Pautan Pantas",
+    informasi: "Maklumat",
+    sosialMedia: "Media Sosial",
+    hargaTiket: "Harga Tiket",
+    caraMenuju: "Cara Pergi",
+    cuaca: "Cuaca",
+    
+    // Admin specific
+    dashboard: "Papan Pemuka",
+    kelola: "Urus",
+    tambah: "Tambah",
+    edit: "Edit",
+    hapus: "Padam",
+    simpan: "Simpan",
+    batal: "Batal",
+    upload: "Muat Naik",
+    kategori: "Kategori",
+    deskripsi: "Penerangan",
+    foto: "Foto",
+    video: "Video",
+    status: "Status",
+    aktif: "Aktif",
+    nonaktif: "Tidak Aktif",
+    
+    // Loading & Messages
+    memuat: "Memuatkan...",
+    berhasil: "Berjaya",
+    gagal: "Gagal",
+    konfirmasi: "Pengesahan",
+    yakin: "Adakah anda pasti?",
+    tidakBisaDibatalkan: "Tindakan ini tidak boleh dibatalkan",
   }
 };
 
