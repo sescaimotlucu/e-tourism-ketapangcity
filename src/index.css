@@ -136,6 +136,29 @@
     @apply shadow-lg hover:shadow-xl;
   }
 
+  .btn-primary {
+    @apply bg-gradient-to-r from-red-dark to-red-soft hover:from-red-soft hover:to-red-dark;
+    @apply text-white font-semibold rounded-2xl px-6 py-3;
+    @apply transition-all duration-300 transform hover:scale-105;
+    @apply shadow-lg hover:shadow-2xl;
+  }
+
+  /* Typography system */
+  .section-title {
+    @apply font-playfair font-bold text-center;
+  }
+
+  .divider-x {
+    @apply w-16 h-1 bg-golden-beige mx-auto my-6 rounded-full;
+  }
+
+  /* Stat cards */
+  .stat-card {
+    @apply backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30;
+    @apply shadow-2xl transition-all duration-500 hover:scale-105;
+    @apply text-center group;
+  }
+
   /* Text animations */
   .text-gradient {
     @apply bg-gradient-to-r from-green-forest via-golden-beige to-red-soft bg-clip-text text-transparent;

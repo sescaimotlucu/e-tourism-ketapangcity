@@ -4,7 +4,6 @@ import { Calendar, Clock, MapPin, Users, Ticket, Filter, Phone } from 'lucide-re
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
 
 export const EventsSection = () => {
   const { t } = useLanguage();
@@ -126,39 +125,40 @@ export const EventsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-green-forest/5 to-golden-beige/10">
-      <div className="container mx-auto px-4">
-        {/* Header */}
+    <section className="py-32 bg-gradient-to-br from-green-forest/5 to-golden-beige/10">
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Section Title */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-red-soft/20 backdrop-blur-md rounded-2xl mb-8 animate-float">
             <Calendar className="h-10 w-10 text-red-soft" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-red-dark mb-6 leading-tight animate-fade-in">
-            {t('eventTitle')}
+          <h2 className="section-title text-6xl font-playfair font-bold text-red-dark mb-6 leading-tight animate-fade-in">
+            Acara & Festival Budaya
           </h2>
-          <p className="text-lg md:text-xl text-green-forest/80 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            {t('eventDesc')}
+          <div className="divider-x w-16 h-1 bg-golden-beige mx-auto my-6 rounded-full"></div>
+          <p className="text-xl text-green-forest/80 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+            Jadwal acara budaya dan festival tradisional Ketapang yang sayang untuk dilewatkan
           </p>
         </div>
 
         {/* Filter Section */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-16">
           <div className="flex items-center gap-3">
             <Filter className="h-5 w-5 text-green-forest" />
-            <span className="font-poppins font-medium text-green-forest">
-              {t('filterGaleri')}:
+            <span className="font-poppins font-medium text-green-forest text-lg">
+              Filter Kategori:
             </span>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
               <Button
                 key={category.value}
                 variant={filter === category.value ? "default" : "outline"}
                 size="sm"
                 onClick={() => setFilter(category.value)}
-                className={`rounded-full font-poppins transition-all duration-300 hover:scale-105 ${
+                className={`btn-primary rounded-full font-poppins transition-all duration-300 hover:scale-105 px-6 py-2 ${
                   filter === category.value
-                    ? 'bg-red-soft hover:bg-red-dark text-white shadow-lg'
+                    ? 'bg-red-dark hover:bg-red-soft text-white shadow-lg'
                     : 'border-red-soft/30 text-red-soft hover:bg-red-soft/10'
                 }`}
               >
@@ -168,19 +168,20 @@ export const EventsSection = () => {
           </div>
         </div>
 
-        {/* Events Grid */}
+        {/* Events Grid with Consistent Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredEvents.map((event, index) => (
             <Card 
               key={event.id}
-              className="group cursor-pointer overflow-hidden card-hover border-0 bg-white/80 backdrop-blur-md rounded-2xl shadow-xl animate-fade-in hover:shadow-2xl transition-all duration-500"
+              className="group cursor-pointer overflow-hidden card-hover border-0 bg-white/80 backdrop-blur-md rounded-2xl shadow-xl animate-fade-in hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden flex-shrink-0">
                 <img
                   src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
@@ -200,38 +201,38 @@ export const EventsSection = () => {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-playfair font-bold text-red-dark mb-3 group-hover:text-red-soft transition-colors duration-300 line-clamp-2">
+              <CardContent className="p-6 flex flex-col flex-1">
+                <h3 className="text-2xl font-playfair font-bold text-red-dark mb-3 group-hover:text-red-soft transition-colors duration-300 line-clamp-2">
                   {event.title}
                 </h3>
                 
-                <p className="text-green-forest/80 text-sm mb-4 line-clamp-3 leading-relaxed">
+                <p className="text-green-forest/80 text-sm mb-6 line-clamp-3 leading-relaxed flex-1">
                   {event.description}
                 </p>
                 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-3 mb-6">
                   <div className="flex items-center text-sm text-green-forest/70">
-                    <Calendar className="h-4 w-4 mr-3 text-red-soft" />
+                    <Calendar className="h-4 w-4 mr-3 text-red-soft flex-shrink-0" />
                     <span className="font-medium">{formatDate(event.date)}</span>
                   </div>
                   <div className="flex items-center text-sm text-green-forest/70">
-                    <Clock className="h-4 w-4 mr-3 text-green-forest" />
+                    <Clock className="h-4 w-4 mr-3 text-green-forest flex-shrink-0" />
                     <span className="font-medium">{event.time} WIB</span>
                   </div>
                   <div className="flex items-center text-sm text-green-forest/70">
-                    <MapPin className="h-4 w-4 mr-3 text-golden-beige" />
+                    <MapPin className="h-4 w-4 mr-3 text-golden-beige flex-shrink-0" />
                     <span className="font-medium">{event.location}</span>
                   </div>
                   <div className="flex items-center text-sm text-green-forest/70">
-                    <Users className="h-4 w-4 mr-3 text-red-dark" />
+                    <Users className="h-4 w-4 mr-3 text-red-dark flex-shrink-0" />
                     <span className="font-medium">{event.capacity}</span>
                   </div>
                 </div>
                 
-                <div className="flex gap-2">
+                <div className="flex gap-3 mt-auto">
                   <Button 
                     onClick={() => handleContactEvent(event)}
-                    className="flex-1 bg-gradient-to-r from-red-soft to-red-dark hover:from-red-dark hover:to-red-soft text-white transition-all duration-300 rounded-xl hover:shadow-lg"
+                    className="btn-primary flex-1 bg-gradient-to-r from-red-soft to-red-dark hover:from-red-dark hover:to-red-soft text-white transition-all duration-300 rounded-xl hover:shadow-lg"
                   >
                     <Ticket className="h-4 w-4 mr-2" />
                     Daftar
@@ -240,7 +241,7 @@ export const EventsSection = () => {
                     onClick={() => handleContactEvent(event)}
                     variant="outline"
                     size="sm"
-                    className="border-green-forest text-green-forest hover:bg-green-forest/10 rounded-xl"
+                    className="border-green-forest text-green-forest hover:bg-green-forest/10 rounded-xl px-4"
                   >
                     <Phone className="h-4 w-4" />
                   </Button>

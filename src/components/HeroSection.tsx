@@ -50,7 +50,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Slides with Parallax Effect */}
+      {/* Background Slides with lighter overlay */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -62,12 +62,12 @@ const HeroSection = () => {
             <img
               src={slide.image}
               alt={t(slide.titleKey)}
-              className="w-full h-full object-cover scale-110"
+              className="w-full h-full object-cover scale-110 brightness-[0.55]"
+              loading="lazy"
             />
           </div>
-          {/* Enhanced gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-transparent"></div>
+          {/* Lighter gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60"></div>
         </div>
       ))}
 
@@ -81,26 +81,26 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-24">
-        <div className="max-w-6xl">
+        <div className="max-w-7xl mx-auto">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold mb-6 leading-tight tracking-wide">
-              <span className="text-white drop-shadow-2xl bg-gradient-to-r from-white via-golden-beige to-white bg-clip-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-playfair font-bold mb-6 leading-tight tracking-wide drop-shadow-2xl">
+              <span className="text-white">
                 Seni & Budaya Tradisional
               </span>
             </h1>
           </div>
           
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 text-neutral-200 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-white/90 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide drop-shadow-lg">
               Saksikan pertunjukan seni tradisional yang memukau dan rasakan kekayaan budaya Ketapang
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up mb-16" style={{ animationDelay: '0.6s' }}>
             <Button 
               size="lg" 
               onClick={() => scrollToSection('kategoriWisata')}
-              className="bg-gradient-to-r from-green-forest/90 via-green-forest to-green-forest/80 hover:from-green-forest hover:via-green-forest/90 hover:to-green-forest/70 text-white px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-green-forest/30 border-0 group backdrop-blur-sm"
+              className="bg-red-dark hover:bg-red-soft text-white px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 group backdrop-blur-sm"
             >
               <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
               Jelajahi Sekarang
@@ -110,32 +110,32 @@ const HeroSection = () => {
               variant="outline" 
               size="lg"
               onClick={() => scrollToSection('acara')}
-              className="border-2 border-white/40 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white hover:border-white/60 px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-white/20 group"
+              className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white hover:border-white/80 px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 group"
             >
               Pelajari Lebih Lanjut
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
 
-          {/* Enhanced Stats with glassmorphism */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-golden-beige/20 transition-all duration-500 hover:scale-105">
-              <div className="text-3xl md:text-5xl font-playfair font-bold text-golden-beige mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">50+</div>
-              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Destinasi Wisata</div>
+          {/* Consistent Stats Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up max-w-4xl mx-auto" style={{ animationDelay: '0.9s' }}>
+            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-red-dark/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+              <div className="text-4xl md:text-5xl font-playfair font-bold text-red-dark mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">50+</div>
+              <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Destinasi Wisata</div>
             </div>
-            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-red-soft/20 transition-all duration-500 hover:scale-105">
-              <div className="text-3xl md:text-5xl font-playfair font-bold text-red-soft mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">15+</div>
-              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Warisan Budaya</div>
+            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-golden-beige/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+              <div className="text-4xl md:text-5xl font-playfair font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">15+</div>
+              <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Warisan Budaya</div>
             </div>
-            <div className="text-center group backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-green-forest/20 transition-all duration-500 hover:scale-105">
-              <div className="text-3xl md:text-5xl font-playfair font-bold text-green-forest mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">1000+</div>
-              <div className="text-sm md:text-lg font-poppins text-neutral-200 tracking-wide font-medium">Pengunjung Puas</div>
+            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-green-forest/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+              <div className="text-4xl md:text-5xl font-playfair font-bold text-green-forest mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">1000+</div>
+              <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Pengunjung Puas</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Modern Navigation Arrows */}
+      {/* Navigation Arrows */}
       <Button
         variant="ghost"
         size="icon"
@@ -154,7 +154,7 @@ const HeroSection = () => {
         <ChevronRight className="h-8 w-8" />
       </Button>
 
-      {/* Modern Slide Indicators */}
+      {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4 z-20">
         {slides.map((_, index) => (
           <button
