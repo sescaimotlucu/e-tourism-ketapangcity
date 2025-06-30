@@ -27,7 +27,7 @@ const translations = {
     heroTitle2: "Destinasi Wisata Alam",
     heroSubtitle2: "Jelajahi keindahan alam Ketapang yang menawan",
     heroTitle3: "Seni & Budaya Tradisional",
-    heroSubtitle3: "Saksikan pertunjukan seni tradisional yang memukau",
+    heroSubtitle3: "Saksikan pertunjukan seni tradisional yang memukau dan rasakan kekayaan budaya Ketapang",
     exploreNow: "Jelajahi Sekarang",
     learnMore: "Pelajari Lebih Lanjut",
     
@@ -107,17 +107,62 @@ const translations = {
     notFound: "Halaman Tidak Ditemukan",
     
     // Map
-    petaLokasi: "Peta Lokasi",
-    petaDesc: "Temukan lokasi destinasi wisata dan budaya Ketapang",
+    petaLokasi: "Peta Lokasi Wisata Ketapang",
+    petaDesc: "Temukan lokasi destinasi wisata dan budaya Ketapang dengan mudah melalui peta interaktif",
     
     // Events
     eventTitle: "Acara & Festival Budaya",
-    eventDesc: "Jadwal acara budaya dan festival tradisional Ketapang",
+    eventDesc: "Jadwal acara budaya dan festival tradisional Ketapang yang sayang untuk dilewatkan",
+    filterKategori: "Filter Kategori",
+    festival: "Festival",
+    kuliner: "Kuliner", 
+    workshop: "Workshop",
+    pameran: "Pameran",
     tanggal: "Tanggal",
     waktu: "Waktu",
     lokasi: "Lokasi",
     tiketMasuk: "Tiket Masuk",
     gratis: "Gratis",
+    daftar: "Daftar",
+    tidakAdaAcara: "Tidak ada acara ditemukan untuk kategori ini",
+    eventRegistrationMessage: "Halo, saya tertarik untuk menghadiri {eventTitle}. Bisakah Anda memberikan informasi lebih lanjut?",
+    
+    // Event Names
+    festivalBudayaKetapang: "Festival Budaya Ketapang 2024",
+    pameranKulinerNusantara: "Pameran Kuliner Nusantara", 
+    workshopTariJepin: "Workshop Tari Jepin",
+    pameranFotografiAlam: "Pameran Fotografi Alam Ketapang",
+    konserMusikTradisionalDayak: "Konser Musik Tradisional Dayak",
+    festivalSeafoodKetapang: "Festival Seafood Ketapang",
+    
+    // Event Descriptions
+    festivalBudayaDesc: "Festival tahunan yang menampilkan berbagai pertunjukan seni dan budaya tradisional Ketapang dengan parade budaya, pameran kerajinan, dan pertunjukan musik tradisional",
+    pameranKulinerDesc: "Pameran kuliner khas Ketapang dan Nusantara dengan berbagai makanan tradisional, cooking demo, dan kompetisi memasak",
+    workshopTariJepinDesc: "Belajar tarian tradisional Jepin dari para maestro tari Ketapang dengan sesi praktek dan pengenalan sejarah tarian",
+    pameranFotografiDesc: "Pameran foto-foto keindahan alam Ketapang dari fotografer lokal dan nasional dengan tema konservasi alam",
+    konserMusikDayakDesc: "Konser musik tradisional Dayak dengan pemandangan sunset di pantai, menampilkan alat musik Sape dan Gendang Panjang",
+    festivalSeafoodDesc: "Festival kuliner seafood segar dengan berbagai olahan ikan dan hasil laut khas pesisir Ketapang",
+    
+    // Event Locations
+    alunAlunKetapang: "Alun-alun Ketapang",
+    pasarFlamboyan: "Pasar Flamboyan",
+    gedungKesenianKetapang: "Gedung Kesenian Ketapang",
+    museumKetapang: "Museum Ketapang",
+    pantaiMuaraKendawangan: "Pantai Muara Kendawangan",
+    pelabuhanKetapang: "Pelabuhan Ketapang",
+    
+    // Event Prices & Capacity
+    rp25000: "Rp 25.000",
+    rp50000: "Rp 50.000",
+    rp15000: "Rp 15.000",
+    rp75000: "Rp 75.000",
+    rp35000: "Rp 35.000",
+    "5000Orang": "5000 orang",
+    "1000Orang": "1000 orang",
+    "50Orang": "50 orang",
+    "200Orang": "200 orang",
+    "300Orang": "300 orang",
+    "800Orang": "800 orang",
     
     // Footer
     footerDesc: "Portal resmi pariwisata dan budaya Kabupaten Ketapang, Kalimantan Barat",
@@ -170,7 +215,7 @@ const translations = {
     heroTitle2: "Natural Tourism Destinations",
     heroSubtitle2: "Explore the captivating natural beauty of Ketapang",
     heroTitle3: "Traditional Arts & Culture",
-    heroSubtitle3: "Witness stunning traditional art performances",
+    heroSubtitle3: "Witness stunning traditional art performances and experience the rich cultural heritage of Ketapang",
     exploreNow: "Explore Now",
     learnMore: "Learn More",
     
@@ -250,17 +295,62 @@ const translations = {
     notFound: "Page Not Found",
     
     // Map
-    petaLokasi: "Location Map",
-    petaDesc: "Find locations of Ketapang tourism and cultural destinations",
+    petaLokasi: "Ketapang Tourism Location Map",
+    petaDesc: "Easily find locations of Ketapang tourism and cultural destinations through our interactive map",
     
     // Events
     eventTitle: "Cultural Events & Festivals",
-    eventDesc: "Schedule of cultural events and traditional festivals in Ketapang",
+    eventDesc: "Schedule of cultural events and traditional festivals in Ketapang that you shouldn't miss",
+    filterKategori: "Filter Category",
+    festival: "Festival",
+    kuliner: "Culinary",
+    workshop: "Workshop", 
+    pameran: "Exhibition",
     tanggal: "Date",
     waktu: "Time",
     lokasi: "Location",
     tiketMasuk: "Entrance Ticket",
     gratis: "Free",
+    daftar: "Register",
+    tidakAdaAcara: "No events found for this category",
+    eventRegistrationMessage: "Hello, I'm interested in attending {eventTitle}. Could you provide more information?",
+    
+    // Event Names
+    festivalBudayaKetapang: "Ketapang Cultural Festival 2024",
+    pameranKulinerNusantara: "Indonesian Culinary Exhibition",
+    workshopTariJepin: "Jepin Dance Workshop",
+    pameranFotografiAlam: "Ketapang Nature Photography Exhibition",
+    konserMusikTradisionalDayak: "Traditional Dayak Music Concert",
+    festivalSeafoodKetapang: "Ketapang Seafood Festival",
+    
+    // Event Descriptions
+    festivalBudayaDesc: "Annual festival featuring various traditional arts and cultural performances of Ketapang with cultural parades, craft exhibitions, and traditional music performances",
+    pameranKulinerDesc: "Culinary exhibition featuring traditional foods from Ketapang and Indonesia with cooking demos and cooking competitions",
+    workshopTariJepinDesc: "Learn traditional Jepin dance from Ketapang dance masters with practice sessions and introduction to dance history",
+    pameranFotografiDesc: "Photography exhibition featuring beautiful nature photos of Ketapang from local and national photographers with nature conservation theme",
+    konserMusikDayakDesc: "Traditional Dayak music concert with sunset views at the beach, featuring Sape and Long Drums instruments",
+    festivalSeafoodDesc: "Fresh seafood culinary festival with various fish dishes and seafood specialties typical of Ketapang coast",
+    
+    // Event Locations
+    alunAlunKetapang: "Ketapang Town Square",
+    pasarFlamboyan: "Flamboyan Market",
+    gedungKesenianKetapang: "Ketapang Arts Building",
+    museumKetapang: "Ketapang Museum",
+    pantaiMuaraKendawangan: "Muara Kendawangan Beach",
+    pelabuhanKetapang: "Ketapang Harbor",
+    
+    // Event Prices & Capacity
+    rp25000: "IDR 25,000",
+    rp50000: "IDR 50,000",
+    rp15000: "IDR 15,000",
+    rp75000: "IDR 75,000",
+    rp35000: "IDR 35,000",
+    "5000Orang": "5000 people",
+    "1000Orang": "1000 people",
+    "50Orang": "50 people",
+    "200Orang": "200 people",
+    "300Orang": "300 people",
+    "800Orang": "800 people",
     
     // Footer
     footerDesc: "Official tourism and culture portal of Ketapang Regency, West Kalimantan",
@@ -313,7 +403,7 @@ const translations = {
     heroTitle2: "Destinasi Pelancongan Alam",
     heroSubtitle2: "Jelajahi keindahan alam Ketapang yang menawan",
     heroTitle3: "Seni & Budaya Tradisional",
-    heroSubtitle3: "Saksikan persembahan seni tradisional yang memukau",
+    heroSubtitle3: "Saksikan persembahan seni tradisional yang memukau dan rasai kekayaan budaya Ketapang",
     exploreNow: "Jelajah Sekarang",
     learnMore: "Ketahui Lebih Lanjut",
     
@@ -393,17 +483,62 @@ const translations = {
     notFound: "Halaman Tidak Dijumpai",
     
     // Map
-    petaLokasi: "Peta Lokasi",
-    petaDesc: "Cari lokasi destinasi pelancongan dan budaya Ketapang",
+    petaLokasi: "Peta Lokasi Pelancongan Ketapang",
+    petaDesc: "Cari lokasi destinasi pelancongan dan budaya Ketapang dengan mudah melalui peta interaktif",
     
     // Events
     eventTitle: "Acara & Festival Budaya",
-    eventDesc: "Jadual acara budaya dan festival tradisional Ketapang",
+    eventDesc: "Jadual acara budaya dan festival tradisional Ketapang yang tidak patut dilepaskan",
+    filterKategori: "Tapis Kategori",
+    festival: "Festival",
+    kuliner: "Kuliner",
+    workshop: "Bengkel",
+    pameran: "Pameran",
     tanggal: "Tarikh",
     waktu: "Masa",
     lokasi: "Lokasi",
     tiketMasuk: "Tiket Masuk",
     gratis: "Percuma",
+    daftar: "Daftar",
+    tidakAdaAcara: "Tiada acara dijumpai untuk kategori ini",
+    eventRegistrationMessage: "Halo, saya berminat untuk menghadiri {eventTitle}. Bolehkah anda berikan maklumat lanjut?",
+    
+    // Event Names
+    festivalBudayaKetapang: "Festival Budaya Ketapang 2024",
+    pameranKulinerNusantara: "Pameran Kuliner Nusantara",
+    workshopTariJepin: "Bengkel Tarian Jepin",
+    pameranFotografiAlam: "Pameran Fotografi Alam Ketapang",
+    konserMusikTradisionalDayak: "Konsert Muzik Tradisional Dayak",
+    festivalSeafoodKetapang: "Festival Makanan Laut Ketapang",
+    
+    // Event Descriptions
+    festivalBudayaDesc: "Festival tahunan yang menampilkan pelbagai persembahan seni dan budaya tradisional Ketapang dengan perarakan budaya, pameran kraftangan, dan persembahan muzik tradisional",
+    pameranKulinerDesc: "Pameran kuliner khas Ketapang dan Nusantara dengan pelbagai makanan tradisional, demo memasak, dan pertandingan memasak",
+    workshopTariJepinDesc: "Belajar tarian tradisional Jepin dari para maestro tari Ketapang dengan sesi amalan dan pengenalan sejarah tarian",
+    pameranFotografiDesc: "Pameran foto-foto keindahan alam Ketapang dari jurugambar tempatan dan kebangsaan dengan tema pemuliharaan alam",
+    konserMusikDayakDesc: "Konsert muzik tradisional Dayak dengan pemandangan matahari terbenam di pantai, menampilkan alat muzik Sape dan Gendang Panjang",
+    festivalSeafoodDesc: "Festival kuliner makanan laut segar dengan pelbagai olahan ikan dan hasil laut khas pesisir Ketapang",
+    
+    // Event Locations
+    alunAlunKetapang: "Alun-alun Ketapang",
+    pasarFlamboyan: "Pasar Flamboyan",
+    gedungKesenianKetapang: "Gedung Kesenian Ketapang",
+    museumKetapang: "Muzium Ketapang",
+    pantaiMuaraKendawangan: "Pantai Muara Kendawangan",
+    pelabuhanKetapang: "Pelabuhan Ketapang",
+    
+    // Event Prices & Capacity
+    rp25000: "RM 25.000",
+    rp50000: "RM 50.000",
+    rp15000: "RM 15.000",
+    rp75000: "RM 75.000",
+    rp35000: "RM 35.000",
+    "5000Orang": "5000 orang",
+    "1000Orang": "1000 orang",
+    "50Orang": "50 orang",
+    "200Orang": "200 orang",
+    "300Orang": "300 orang",
+    "800Orang": "800 orang",
     
     // Footer
     footerDesc: "Portal rasmi pelancongan dan budaya Kabupaten Ketapang, Kalimantan Barat",
