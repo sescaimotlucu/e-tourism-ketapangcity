@@ -117,17 +117,17 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Consistent Stats Grid */}
+          {/* Consistent Stats Grid - added group class directly to each card */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up max-w-4xl mx-auto" style={{ animationDelay: '0.9s' }}>
-            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-red-dark/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+            <div className="stat-card group h-40 flex flex-col justify-center">
               <div className="text-4xl md:text-5xl font-playfair font-bold text-red-dark mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">50+</div>
               <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Destinasi Wisata</div>
             </div>
-            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-golden-beige/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+            <div className="stat-card group h-40 flex flex-col justify-center">
               <div className="text-4xl md:text-5xl font-playfair font-bold text-golden-beige mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">15+</div>
               <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Warisan Budaya</div>
             </div>
-            <div className="stat-card text-center group backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30 shadow-2xl hover:shadow-green-forest/20 transition-all duration-500 hover:scale-105 h-40 flex flex-col justify-center">
+            <div className="stat-card group h-40 flex flex-col justify-center">
               <div className="text-4xl md:text-5xl font-playfair font-bold text-green-forest mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">1000+</div>
               <div className="text-base font-poppins text-white/90 tracking-wide font-medium">Pengunjung Puas</div>
             </div>

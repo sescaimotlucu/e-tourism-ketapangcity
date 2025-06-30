@@ -145,18 +145,18 @@
 
   /* Typography system */
   .section-title {
-    @apply font-playfair font-bold text-center;
+    @apply text-4xl font-playfair font-bold text-center;
   }
 
   .divider-x {
     @apply w-16 h-1 bg-golden-beige mx-auto my-6 rounded-full;
   }
 
-  /* Stat cards */
+  /* Stat cards - removed group from @apply */
   .stat-card {
     @apply backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30;
     @apply shadow-2xl transition-all duration-500 hover:scale-105;
-    @apply text-center group;
+    @apply text-center;
   }
 
   /* Text animations */
