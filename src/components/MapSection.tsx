@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MapPin, Star, Clock, ExternalLink, Filter } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,20 +9,6 @@ export const MapSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('semua');
 
   const locations = [
-    {
-      id: 1,
-      name: t('pantaiMuaraKendawangan'),
-      category: "alam",
-      type: "beach",
-      description: t('pantaiMuaraKendawanganDesc'),
-      coordinates: { lat: -1.8471, lng: 109.9758 },
-      address: "Kendawangan, Ketapang, Kalimantan Barat",
-      hours: "24 " + t('jam'),
-      rating: 4.8,
-      reviews: 324,
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
-      icon: "🏖️"
-    },
     {
       id: 2,
       name: t('museumKetapang'),
