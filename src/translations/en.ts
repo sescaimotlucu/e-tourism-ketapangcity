@@ -1,4 +1,3 @@
-
 export const enTranslations = {
   // Navigation
   beranda: "Home",
@@ -186,4 +185,35 @@ export const enTranslations = {
   konfirmasi: "Confirmation",
   yakin: "Are you sure?",
   tidakBisaDibatalkan: "This action cannot be undone",
+  
+  // Map Section New Translations
+  pantaiMuaraKendawangan: "Muara Kendawangan Beach",
+  pantaiMuaraKendawanganDesc: "Beautiful beach with stunning sunset views and calm waves for relaxation",
+  museumKetapang: "Ketapang Museum",
+  museumKetapangDesc: "Museum preserving Ketapang's history and culture with historical artifacts", 
+  pasarFlamboyan: "Flamboyan Market",
+  pasarFlamboyankDesc: "Traditional culinary center with various local foods and snacks",
+  tamanNasionalGunungPalung: "Gunung Palung National Park",
+  tamanNasionalGunungPalungDesc: "National park with extraordinary biodiversity and challenging hiking trails",
+  masjidRayaKetapang: "Ketapang Grand Mosque",
+  masjidRayaKetapangDesc: "Historic mosque with stunning traditional architecture and high spiritual value",
+  pulauRandayan: "Randayan Island",
+  pulauRandayanDesc: "Exotic island with white sandy beaches and clear seawater for snorkeling",
+  sanggarTariJepin: "Jepin Dance Studio",
+  sanggarTariJepinDesc: "Place to learn and preserve traditional Jepin dance with experienced instructors",
+  rumahMakanSeafood: "Bahari Seafood Restaurant",
+  rumahMakanSeafoodDesc: "Fresh seafood restaurant with authentic Ketapang flavors and sea views",
+  lihatKoleksiGambar: "View the best collection of Ketapang tourism images",
+  panduan: "Travel Guide",
+  panduanDesc: "Get directions and complete information about tourist destinations",
+  
+  // Enhanced existing translations  
+  wisataAlam: "Nature Tourism",
+  wisataBudaya: "Cultural Tourism",
+  wisataKuliner: "Culinary Tourism",
+  wisataTari: "Dance Tourism",
+  
+  // Button improvements
+  daftarSekarang: "Register Now",
+  jelajahiSekarang: "Explore Now",
 };

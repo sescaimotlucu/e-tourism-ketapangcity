@@ -1,4 +1,3 @@
-
 export const idTranslations = {
   // Navigation
   beranda: "Beranda",
@@ -186,4 +185,35 @@ export const idTranslations = {
   konfirmasi: "Konfirmasi",
   yakin: "Apakah Anda yakin?",
   tidakBisaDibatalkan: "Tindakan ini tidak dapat dibatalkan",
+  
+  // Map Section New Translations
+  pantaiMuaraKendawangan: "Pantai Muara Kendawangan",
+  pantaiMuaraKendawanganDesc: "Pantai indah dengan pemandangan sunset yang menawan dan ombak tenang untuk bersantai",
+  museumKetapang: "Museum Ketapang", 
+  museumKetapangDesc: "Museum yang menyimpan koleksi sejarah dan budaya Ketapang dengan artefak bersejarah",
+  pasarFlamboyan: "Pasar Flamboyan",
+  pasarFlamboyankDesc: "Pusat kuliner tradisional dengan berbagai makanan khas dan jajanan lokal",
+  tamanNasionalGunungPalung: "Taman Nasional Gunung Palung",
+  tamanNasionalGunungPalungDesc: "Taman nasional dengan keanekaragaman hayati yang luar biasa dan trek hiking menantang",
+  masjidRayaKetapang: "Masjid Raya Ketapang",
+  masjidRayaKetapangDesc: "Masjid bersejarah dengan arsitektur tradisional yang memukau dan nilai spiritual tinggi",
+  pulauRandayan: "Pulau Randayan",
+  pulauRandayanDesc: "Pulau eksotis dengan pantai pasir putih dan air laut yang jernih untuk snorkeling",
+  sanggarTariJepin: "Sanggar Tari Jepin",
+  sanggarTariJepinDesc: "Tempat belajar dan melestarikan tarian tradisional Jepin dengan instruktur berpengalaman",
+  rumahMakanSeafood: "Rumah Makan Seafood Bahari",
+  rumahMakanSeafoodDesc: "Restoran seafood segar dengan cita rasa autentik Ketapang dan pemandangan laut",
+  lihatKoleksiGambar: "Lihat koleksi gambar wisata terbaik Ketapang",
+  panduan: "Panduan Wisata",
+  panduanDesc: "Dapatkan petunjuk arah dan informasi lengkap destinasi wisata",
+  
+  // Enhanced existing translations
+  wisataAlam: "Wisata Alam",
+  wisataBudaya: "Wisata Budaya", 
+  wisataKuliner: "Wisata Kuliner",
+  wisataTari: "Wisata Tari",
+  
+  // Button improvements
+  daftarSekarang: "Daftar Sekarang",
+  jelajahiSekarang: "Jelajahi Sekarang",
 };

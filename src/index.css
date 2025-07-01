@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -122,7 +121,7 @@
 }
 
 @layer components {
-  /* Enhanced button styles */
+  /* Enhanced button styles with Ketapang colors */
   .btn-gradient {
     @apply bg-gradient-to-r from-green-forest via-nature-gradient-middle to-nature-gradient-end;
     @apply hover:from-nature-gradient-start hover:via-green-forest hover:to-nature-gradient-middle;
@@ -131,25 +130,70 @@
   }
 
   .btn-modern {
-    @apply rounded-2xl px-8 py-4 font-poppins font-semibold;
+    @apply rounded-full px-8 py-4 font-poppins font-semibold;
     @apply transition-all duration-300 transform hover:scale-105;
     @apply shadow-lg hover:shadow-xl;
   }
 
   .btn-primary {
     @apply bg-gradient-to-r from-red-dark to-red-soft hover:from-red-soft hover:to-red-dark;
-    @apply text-white font-semibold rounded-2xl px-6 py-3;
+    @apply text-white font-semibold rounded-full px-6 py-3;
     @apply transition-all duration-300 transform hover:scale-105;
     @apply shadow-lg hover:shadow-2xl;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
-  /* Typography system */
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.3);
+  }
+
+  .btn-ketapang {
+    background-color: #801C1C;
+    @apply text-white font-semibold rounded-full px-8 py-3;
+    @apply transition-all duration-300 transform hover:scale-105;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .btn-ketapang:hover {
+    background-color: #a02626;
+    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.4);
+  }
+
+  /* Typography system with consistent sizing */
   .section-title {
-    @apply text-4xl font-playfair font-bold text-center;
+    @apply text-5xl md:text-6xl font-playfair font-bold text-center;
+  }
+
+  .heading-large {
+    @apply text-4xl font-playfair font-bold;
+  }
+
+  .heading-medium {
+    @apply text-2xl font-playfair font-semibold;
+  }
+
+  .text-paragraph {
+    @apply text-lg leading-relaxed;
   }
 
   .divider-x {
     @apply w-16 h-1 bg-golden-beige mx-auto my-6 rounded-full;
+  }
+
+  /* Enhanced card styles with uniform sizing */
+  .card-uniform {
+    @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl;
+    @apply transition-all duration-500 transform hover:scale-105;
+    @apply border-0 overflow-hidden;
+    min-height: 400px;
+  }
+
+  .card-uniform .card-image {
+    @apply aspect-[4/3] overflow-hidden;
+  }
+
+  .card-uniform .card-content {
+    @apply p-6 flex flex-col justify-between flex-1;
   }
 
   /* Stat cards - removed group from @apply */
@@ -182,6 +226,24 @@
 
   .parallax-element {
     @apply absolute inset-0 will-change-transform;
+  }
+
+  /* Pinterest-style grid */
+  .pinterest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Smooth scroll behavior enhancement */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced gradient backgrounds */
+  .bg-cream-gradient {
+    background: linear-gradient(135deg, #fef7ed 0%, #f0fdf4 50%, #fefce8 100%);
   }
 }
 

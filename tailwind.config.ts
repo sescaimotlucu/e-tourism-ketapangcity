@@ -27,6 +27,10 @@ export default {
 				'red-dark': '#681313',
 				'green-forest': '#5C7658',
 				'golden-beige': '#E6D385',
+				'ketapang-maroon': '#801C1C',
+				'cream-50': '#fefbf7',
+				'cream-100': '#fef7ed',
+				'green-50': '#f0fdf4',
 				'nature-gradient': {
 					'start': '#4ade80',
 					'middle': '#22d3ee',
@@ -82,6 +86,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)',
 				'xl': '1.25rem',
 				'2xl': '1.5rem',
+				'3xl': '2rem',
 			},
 			keyframes: {
 				'accordion-down': {
