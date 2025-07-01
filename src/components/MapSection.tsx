@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MapPin, Star, Clock, ExternalLink, Camera, Filter } from 'lucide-react';
+import { MapPin, Star, Clock, ExternalLink, Filter } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -146,13 +146,9 @@ export const MapSection = () => {
     }
   };
 
-  const handleOpenGoogleMaps = (location?: any) => {
-    if (location) {
-      const url = `https://www.google.com/maps?q=${location.coordinates.lat},${location.coordinates.lng}`;
-      window.open(url, '_blank');
-    } else {
-      window.open('https://maps.app.goo.gl/ssrFo6sBMzrt4YGz9', '_blank');
-    }
+  const handleOpenGoogleMaps = (location: any) => {
+    const url = `https://www.google.com/maps?q=${location.coordinates.lat},${location.coordinates.lng}`;
+    window.open(url, '_blank');
   };
 
   return (
@@ -263,65 +259,19 @@ export const MapSection = () => {
         </div>
 
         {/* Embedded Google Maps */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <Card className="h-96 overflow-hidden rounded-3xl border-0 shadow-2xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19354788686!2d109.77429842167969!3d-1.8456077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e05171c0b8b0b0b%3A0x1234567890abcdef!2sKetapang%2C%20West%20Kalimantan!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={t('petaLokasi')}
-              ></iframe>
-            </Card>
-          </div>
-          
-          <div className="space-y-6">
-            <Card className="p-8 border-0 shadow-xl rounded-3xl bg-gradient-to-br from-white/90 to-golden-beige/10 backdrop-blur-sm">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-forest/20 to-golden-beige/20 rounded-2xl mb-4">
-                  <Camera className="h-8 w-8 text-green-forest" />
-                </div>
-                <h3 className="text-2xl font-playfair font-bold text-red-dark mb-4">
-                  {t('galeriWisata')}
-                </h3>
-                <p className="text-green-forest/80 mb-6 leading-relaxed">
-                  {t('lihatKoleksiGambar')}
-                </p>
-                <Button 
-                  onClick={() => window.location.href = '/galeri'}
-                  className="w-full bg-gradient-to-r from-green-forest to-golden-beige text-white rounded-full px-6 py-3 hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold"
-                >
-                  <Camera className="h-4 w-4 mr-2" />
-                  {t('lihatGaleri')}
-                </Button>
-              </div>
-            </Card>
-            
-            <Card className="p-8 border-0 shadow-xl rounded-3xl bg-gradient-to-br from-white/90 to-red-soft/10 backdrop-blur-sm">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-soft/20 to-golden-beige/20 rounded-2xl mb-4">
-                  <MapPin className="h-8 w-8 text-red-soft" />
-                </div>
-                <h3 className="text-2xl font-playfair font-bold text-red-dark mb-4">
-                  {t('panduan')}
-                </h3>
-                <p className="text-green-forest/80 mb-6 leading-relaxed">
-                  {t('panduanDesc')}
-                </p>
-                <Button 
-                  onClick={() => handleOpenGoogleMaps()}
-                  className="w-full bg-gradient-to-r from-red-dark to-red-soft text-white rounded-full px-6 py-3 hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Google Maps
-                </Button>
-              </div>
-            </Card>
-          </div>
+        <div className="w-full">
+          <Card className="h-96 overflow-hidden rounded-3xl border-0 shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19354788686!2d109.77429842167969!3d-1.8456077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e05171c0b8b0b0b%3A0x1234567890abcdef!2sKetapang%2C%20West%20Kalimantan!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={t('petaLokasi')}
+            ></iframe>
+          </Card>
         </div>
       </div>
     </section>
