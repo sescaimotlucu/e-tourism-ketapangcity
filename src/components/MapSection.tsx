@@ -1,113 +1,13 @@
+
 import { useState } from 'react';
-import { MapPin, Star, Clock, ExternalLink, Filter } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { MapPin, Filter } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const MapSection = () => {
   const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('semua');
-
-  const locations = [
-    {
-      id: 2,
-      name: t('museumKetapang'),
-      category: "budaya",
-      type: "museum",
-      description: t('museumKetapangDesc'),
-      coordinates: { lat: -1.8456, lng: 109.9742 },
-      address: "Jl. Rahadi Osman No. 1, Ketapang",
-      hours: "08:00 - 16:00",
-      rating: 4.5,
-      reviews: 156,
-      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&q=80",
-      icon: "🏛️"
-    },
-    {
-      id: 3,
-      name: t('pasarFlamboyan'),
-      category: "kuliner",
-      type: "market",
-      description: t('pasarFlamboyankDesc'),
-      coordinates: { lat: -1.8489, lng: 109.9721 },
-      address: "Jl. Flamboyan, Ketapang",
-      hours: "06:00 - 18:00",
-      rating: 4.6,
-      reviews: 267,
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&q=80",
-      icon: "🍜"
-    },
-    {
-      id: 4,
-      name: t('tamanNasionalGunungPalung'),
-      category: "alam",
-      type: "park",
-      description: t('tamanNasionalGunungPalungDesc'),
-      coordinates: { lat: -1.6500, lng: 110.1000 },
-      address: "Sukadana, Ketapang",
-      hours: "07:00 - 17:00",
-      rating: 4.9,
-      reviews: 189,
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80",
-      icon: "🌲"
-    },
-    {
-      id: 5,
-      name: t('masjidRayaKetapang'),
-      category: "budaya",
-      type: "mosque",
-      description: t('masjidRayaKetapangDesc'),
-      coordinates: { lat: -1.8467, lng: 109.9734 },
-      address: "Jl. Sultan Abdurrahman, Ketapang",
-      hours: "05:00 - 21:00",
-      rating: 4.7,
-      reviews: 298,
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&q=80",
-      icon: "🕌"
-    },
-    {
-      id: 6,
-      name: t('pulauRandayan'),
-      category: "alam",
-      type: "island",
-      description: t('pulauRandayanDesc'),
-      coordinates: { lat: -1.7500, lng: 109.8500 },
-      address: "Pulau Randayan, Ketapang",
-      hours: "24 " + t('jam'),
-      rating: 4.8,
-      reviews: 412,
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
-      icon: "🏝️"
-    },
-    {
-      id: 7,
-      name: t('sanggarTariJepin'),
-      category: "tari",
-      type: "cultural",
-      description: t('sanggarTariJepinDesc'),
-      coordinates: { lat: -1.8445, lng: 109.9715 },
-      address: "Jl. Suprapto, Ketapang",
-      hours: "09:00 - 17:00",
-      rating: 4.4,
-      reviews: 128,
-      image: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=400&q=80",
-      icon: "💃"
-    },
-    {
-      id: 8,
-      name: t('rumahMakanSeafood'),
-      category: "kuliner",
-      type: "restaurant",
-      description: t('rumahMakanSeafoodDesc'),
-      coordinates: { lat: -1.8478, lng: 109.9698 },
-      address: "Jl. Pelabuhan, Ketapang",
-      hours: "10:00 - 22:00",
-      rating: 4.5,
-      reviews: 203,
-      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80",
-      icon: "🦐"
-    }
-  ];
 
   const categories = [
     { value: 'semua', label: t('semua') },
@@ -116,25 +16,6 @@ export const MapSection = () => {
     { value: 'kuliner', label: t('wisataKuliner') },
     { value: 'tari', label: t('wisataTari') }
   ];
-
-  const filteredLocations = selectedCategory === 'semua' 
-    ? locations 
-    : locations.filter(location => location.category === selectedCategory);
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'alam': return 'from-green-forest/20 to-green-forest/5 border-green-forest/30';
-      case 'budaya': return 'from-red-soft/20 to-red-soft/5 border-red-soft/30';
-      case 'kuliner': return 'from-golden-beige/20 to-golden-beige/5 border-golden-beige/30';
-      case 'tari': return 'from-red-dark/20 to-red-dark/5 border-red-dark/30';
-      default: return 'from-gray-200/20 to-gray-200/5 border-gray-300/30';
-    }
-  };
-
-  const handleOpenGoogleMaps = (location: any) => {
-    const url = `https://www.google.com/maps?q=${location.coordinates.lat},${location.coordinates.lng}`;
-    window.open(url, '_blank');
-  };
 
   return (
     <section className="py-32 bg-gradient-to-br from-cream-50 via-green-50 to-golden-beige/10">
@@ -178,69 +59,6 @@ export const MapSection = () => {
               </Button>
             ))}
           </div>
-        </div>
-
-        {/* Pinterest-style Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {filteredLocations.map((location, index) => (
-            <Card 
-              key={location.id} 
-              className={`overflow-hidden border-2 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-gradient-to-br ${getCategoryColor(location.category)} backdrop-blur-sm animate-fade-in cursor-pointer group`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleOpenGoogleMaps(location)}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img 
-                  src={location.image} 
-                  alt={location.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div className="absolute top-4 left-4">
-                  <span className="text-3xl drop-shadow-lg">{location.icon}</span>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
-                    <Star className="h-4 w-4 text-golden-beige fill-current mr-1" />
-                    <span className="text-sm font-semibold text-gray-700">{location.rating}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <CardContent className="p-6">
-                <h3 className="text-xl font-playfair font-bold text-red-dark mb-3 line-clamp-2 group-hover:text-red-soft transition-colors">
-                  {location.name}
-                </h3>
-                
-                <p className="text-green-forest/80 mb-4 text-sm line-clamp-3 leading-relaxed">
-                  {location.description}
-                </p>
-                
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-green-forest/70 text-sm">
-                    <Clock className="h-4 w-4 mr-2 text-green-forest flex-shrink-0" />
-                    <span className="font-medium">{location.hours}</span>
-                  </div>
-                  <div className="flex items-center text-green-forest/70 text-sm">
-                    <Star className="h-4 w-4 mr-2 text-golden-beige fill-current flex-shrink-0" />
-                    <span className="font-medium">{location.reviews} {t('ulasan')}</span>
-                  </div>
-                </div>
-                
-                <Button 
-                  className="w-full bg-gradient-to-r from-red-dark to-red-soft text-white rounded-full px-6 py-2 hover:shadow-lg transition-all duration-300 hover:scale-105 font-semibold"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenGoogleMaps(location);
-                  }}
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  {t('lihatDetail')}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Embedded Google Maps */}
