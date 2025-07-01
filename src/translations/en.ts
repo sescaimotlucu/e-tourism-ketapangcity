@@ -1,3 +1,4 @@
+
 export const enTranslations = {
   // Navigation
   beranda: "Home",
@@ -187,11 +188,8 @@ export const enTranslations = {
   tidakBisaDibatalkan: "This action cannot be undone",
   
   // Map Section New Translations
-  pantaiMuaraKendawangan: "Muara Kendawangan Beach",
   pantaiMuaraKendawanganDesc: "Beautiful beach with stunning sunset views and calm waves for relaxation",
-  museumKetapang: "Ketapang Museum",
   museumKetapangDesc: "Museum preserving Ketapang's history and culture with historical artifacts", 
-  pasarFlamboyan: "Flamboyan Market",
   pasarFlamboyankDesc: "Traditional culinary center with various local foods and snacks",
   tamanNasionalGunungPalung: "Gunung Palung National Park",
   tamanNasionalGunungPalungDesc: "National park with extraordinary biodiversity and challenging hiking trails",
@@ -206,12 +204,6 @@ export const enTranslations = {
   lihatKoleksiGambar: "View the best collection of Ketapang tourism images",
   panduan: "Travel Guide",
   panduanDesc: "Get directions and complete information about tourist destinations",
-  
-  // Enhanced existing translations  
-  wisataAlam: "Nature Tourism",
-  wisataBudaya: "Cultural Tourism",
-  wisataKuliner: "Culinary Tourism",
-  wisataTari: "Dance Tourism",
   
   // Button improvements
   daftarSekarang: "Register Now",

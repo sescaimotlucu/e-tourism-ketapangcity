@@ -1,3 +1,4 @@
+
 export const idTranslations = {
   // Navigation
   beranda: "Beranda",
@@ -187,11 +188,8 @@ export const idTranslations = {
   tidakBisaDibatalkan: "Tindakan ini tidak dapat dibatalkan",
   
   // Map Section New Translations
-  pantaiMuaraKendawangan: "Pantai Muara Kendawangan",
   pantaiMuaraKendawanganDesc: "Pantai indah dengan pemandangan sunset yang menawan dan ombak tenang untuk bersantai",
-  museumKetapang: "Museum Ketapang", 
   museumKetapangDesc: "Museum yang menyimpan koleksi sejarah dan budaya Ketapang dengan artefak bersejarah",
-  pasarFlamboyan: "Pasar Flamboyan",
   pasarFlamboyankDesc: "Pusat kuliner tradisional dengan berbagai makanan khas dan jajanan lokal",
   tamanNasionalGunungPalung: "Taman Nasional Gunung Palung",
   tamanNasionalGunungPalungDesc: "Taman nasional dengan keanekaragaman hayati yang luar biasa dan trek hiking menantang",
@@ -206,12 +204,6 @@ export const idTranslations = {
   lihatKoleksiGambar: "Lihat koleksi gambar wisata terbaik Ketapang",
   panduan: "Panduan Wisata",
   panduanDesc: "Dapatkan petunjuk arah dan informasi lengkap destinasi wisata",
-  
-  // Enhanced existing translations
-  wisataAlam: "Wisata Alam",
-  wisataBudaya: "Wisata Budaya", 
-  wisataKuliner: "Wisata Kuliner",
-  wisataTari: "Wisata Tari",
   
   // Button improvements
   daftarSekarang: "Daftar Sekarang",
