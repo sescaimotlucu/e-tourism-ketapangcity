@@ -235,8 +235,8 @@ export const enTranslations = {
   rumahMakanSeafood: "Bahari Seafood Restaurant",
   rumahMakanSeafoodDesc: "Fresh seafood restaurant with authentic Ketapang flavors and sea views",
   lihatKoleksiGambar: "View the best collection of Ketapang tourism images",
-  panduan: "Travel Guide",
-  panduanDesc: "Get directions and complete information about tourist destinations",
+  panduanWisata: "Travel Guide",
+  panduanWisataDesc: "Get directions and complete information about tourist destinations",
   
   // Button improvements
   daftarSekarang: "Register Now",

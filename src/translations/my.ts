@@ -235,8 +235,8 @@ export const myTranslations = {
   rumahMakanSeafood: "Restoran Makanan Laut Bahari",
   rumahMakanSeafoodDesc: "Restoran makanan laut segar dengan cita rasa asli Ketapang dan pemandangan laut",
   lihatKoleksiGambar: "Lihat koleksi gambar pelancongan terbaik Ketapang",
-  panduan: "Panduan Pelancongan",  
-  panduanDesc: "Dapatkan arah dan maklumat lengkap destinasi pelancongan",
+  panduanWisata: "Panduan Pelancongan",  
+  panduanWisataDesc: "Dapatkan arah dan maklumat lengkap destinasi pelancongan",
   
   // Button improvements
   daftarSekarang: "Daftar Sekarang",
