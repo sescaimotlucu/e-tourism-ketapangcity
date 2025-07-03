@@ -1,0 +1,21 @@
+
+export const mapTranslations = {
+  petaLokasi: "Peta Lokasi Wisata Ketapang",
+  petaDesc: "Temukan lokasi destinasi wisata dan budaya Ketapang dengan mudah melalui peta interaktif",
+  pantaiMuaraKendawanganDesc: "Pantai indah dengan pemandangan sunset yang menawan dan ombak tenang untuk bersantai",
+  museumKetapangDesc: "Museum yang menyimpan koleksi sejarah dan budaya Ketapang dengan artefak bersejarah",
+  pasarFlamboyankDesc: "Pusat kuliner tradisional dengan berbagai makanan khas dan jajanan lokal",
+  tamanNasionalGunungPalung: "Taman Nasional Gunung Palung",
+  tamanNasionalGunungPalungDesc: "Taman nasional dengan keanekaragaman hayati yang luar biasa dan trek hiking menantang",
+  masjidRayaKetapang: "Masjid Raya Ketapang",
+  masjidRayaKetapangDesc: "Masjid bersejarah dengan arsitektur tradisional yang memukau dan nilai spiritual tinggi",
+  pulauRandayan: "Pulau Randayan",
+  pulauRandayanDesc: "Pulau eksotis dengan pantai pasir putih dan air laut yang jernih untuk snorkeling",
+  sanggarTariJepin: "Sanggar Tari Jepin",
+  sanggarTariJepinDesc: "Tempat belajar dan melestarikan tarian tradisional Jepin dengan instruktur berpengalaman",
+  rumahMakanSeafood: "Rumah Makan Seafood Bahari",
+  rumahMakanSeafoodDesc: "Restoran seafood segar dengan cita rasa autentik Ketapang dan pemandangan laut",
+  lihatKoleksiGambar: "Lihat koleksi gambar wisata terbaik Ketapang",
+  panduan: "Panduan Wisata",
+  panduanDesc: "Dapatkan petunjuk arah dan informasi lengkap destinasi wisata",
+};
