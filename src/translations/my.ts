@@ -1,4 +1,3 @@
-
 export const myTranslations = {
   // Navigation
   beranda: "Laman Utama",
@@ -9,6 +8,7 @@ export const myTranslations = {
   artikel: "Artikel",
   peta: "Peta",
   acara: "Acara",
+  ketapangCity: "Ketapang City",
   
   // Hero Section
   heroTitle1: "Warisan Budaya Nusantara",
@@ -39,18 +39,6 @@ export const myTranslations = {
   tertarikBerkunjung: "Berminat untuk menjelajahi keajaiban Ketapang?",
   lihatGaleri: "Lihat Galeri",
   
-  // Gallery
-  galeriWisata: "Galeri Pelancongan Ketapang",
-  galeriDesc: "Jelajahi kekayaan visual Ketapang melalui koleksi foto pelancongan alam, budaya, kuliner, dan seni. Setiap gambar adalah cerminan kekayaan tempatan yang tak ternilai.",
-  filterGaleri: "Tapis Galeri",
-  semua: "Semua",
-  bagikan: "Kongsi",
-  lihatAsli: "Lihat Asal",
-  tidakAdaGambar: "Tiada gambar dijumpai untuk kategori ini",
-  galeriTerpopuler: "Galeri Kegemaran Pelawat",
-  galeriTerpopulerDesc: "Foto paling banyak dilihat dan disukai oleh pelawat laman web",
-  kenangan: "Kenangan Terbaik dari Ketapang",
-  
   // Statistics
   statisticsTitle: "Ketapang dalam Nombor",
   statisticsDesc: "Data terkini mengenai pelancongan dan budaya Ketapang",
@@ -58,15 +46,29 @@ export const myTranslations = {
   destinasiAktif: "Destinasi Aktif",
   eventBudaya: "Acara Budaya",
   komunitasLokal: "Komuniti Tempatan",
+  destinasiWisata: "Destinasi Pelancongan",
+  pengunjungPerTahun: "Pelawat per Tahun",
+  tahunBerdiri: "Tahun Ditubuhkan",
+  ratingKepuasan: "Rating Kepuasan",
   
   // Testimonials
   testimonialsTitle: "Cerita Pelawat",
   testimonialsDesc: "Dengar pengalaman tak terlupakan dari para pelancong",
+  testimoniPengunjung: "Testimoni Pelawat",
+  ulasanTerverifikasi: "Ulasan Disahkan",
+  terpercaya: "Dipercayai",
+  bagikanPengalaman: "Kongsi Pengalaman Anda!",
+  bagikanPengalamanDesc: "Sudah melawat Ketapang? Ceritakan pengalaman menakjubkan anda",
+  tulisTestimoni: "Tulis Testimoni",
   
   // News & Articles
   newsTitle: "Berita & Artikel Terkini",
   newsDesc: "Maklumat terbaru mengenai pelancongan dan budaya Ketapang",
   bacaSelengkapnya: "Baca Selanjutnya",
+  beritaEventTerkini: "Berita & Acara Terkini",
+  beritaEventDesc: "Ikuti perkembangan terbaru dan acara menarik di Kabupaten Ketapang",
+  lihatSemuaBerita: "Lihat Semua Berita",
+  daftarNewsletter: "Daftar Newsletter",
   
   // Contact
   contactTitle: "Hubungi Kami",
@@ -80,6 +82,47 @@ export const myTranslations = {
   jamOperasional: "Waktu Operasi",
   seninJumat: "Isnin - Jumaat: 08:00 - 17:00",
   sabtuMinggu: "Sabtu - Ahad: 09:00 - 15:00",
+  contactDescFooter: "Ada soalan tentang destinasi pelancongan Ketapang? Jangan teragak-agak untuk hubungi pasukan kami",
+  kirimPertanyaan: "Hantar Soalan",
+  masukkanNama: "Masukkan nama penuh",
+  emailPlaceholder: "nama@email.com",
+  pesanPlaceholder: "Tulis soalan atau mesej anda di sini...",
+  
+  // Footer
+  footerDesc: "Portal rasmi pelancongan dan budaya Kabupaten Ketapang, Kalimantan Barat",
+  linkCepat: "Pautan Pantas",
+  informasi: "Maklumat",
+  sosialMedia: "Media Sosial",
+  hargaTiket: "Harga Tiket",
+  caraMenuju: "Cara Pergi",
+  cuaca: "Cuaca",
+  footerTagline: "Jelajahi keindahan alam dan kekayaan budaya Kabupaten Ketapang. Destinasi pelancongan terbaik di Kalimantan Barat menanti anda.",
+  tautanCepat: "Pautan Pantas",
+  destinasiWisataFooter: "Destinasi Pelancongan",
+  paketWisata: "Pakej Pelancongan",
+  galeriFoto: "Galeri Foto",
+  beritaEvent: "Berita & Acara",
+  tentangKami: "Tentang Kami",
+  kontakFooter: "Hubungi",
+  newsletter: "Newsletter",
+  newsletterDesc: "Dapatkan maklumat terbaru tentang destinasi pelancongan dan acara menarik.",
+  emailAnda: "E-mel Anda",
+  berlangganan: "Berlangganan",
+  syaratKetentuan: "Terma & Syarat",
+  kebijakanPrivasi: "Dasar Privasi",
+  hakCipta: "© 2024 E-Tourism Ketapang City. Semua hak terpelihara.",
+  
+  // Gallery
+  galeriWisata: "Galeri Pelancongan Ketapang",
+  galeriDesc: "Jelajahi kekayaan visual Ketapang melalui koleksi foto pelancongan alam, budaya, kuliner, dan seni. Setiap gambar adalah cerminan kekayaan tempatan yang tak ternilai.",
+  filterGaleri: "Tapis Galeri",
+  semua: "Semua",
+  bagikan: "Kongsi",
+  lihatAsli: "Lihat Asal",
+  tidakAdaGambar: "Tiada gambar dijumpai untuk kategori ini",
+  galeriTerpopuler: "Galeri Kegemaran Pelawat",
+  galeriTerpopulerDesc: "Foto paling banyak dilihat dan disukai oleh pelawat laman web",
+  kenangan: "Kenangan Terbaik dari Ketapang",
   
   // Detail Pages
   tentangDestinasi: "Tentang Destinasi",
@@ -152,15 +195,6 @@ export const myTranslations = {
   "200Orang": "200 orang",
   "300Orang": "300 orang",
   "800Orang": "800 orang",
-  
-  // Footer
-  footerDesc: "Portal rasmi pelancongan dan budaya Kabupaten Ketapang, Kalimantan Barat",
-  linkCepat: "Pautan Pantas",
-  informasi: "Maklumat",
-  sosialMedia: "Media Sosial",
-  hargaTiket: "Harga Tiket",
-  caraMenuju: "Cara Pergi",
-  cuaca: "Cuaca",
   
   // Admin specific
   dashboard: "Papan Pemuka",

@@ -1,4 +1,3 @@
-
 export const enTranslations = {
   // Navigation
   beranda: "Home",
@@ -9,6 +8,7 @@ export const enTranslations = {
   artikel: "Articles",
   peta: "Map",
   acara: "Events",
+  ketapangCity: "Ketapang City",
   
   // Hero Section
   heroTitle1: "Indonesian Cultural Heritage",
@@ -39,18 +39,6 @@ export const enTranslations = {
   tertarikBerkunjung: "Interested in exploring Ketapang's wonders?",
   lihatGaleri: "View Gallery",
   
-  // Gallery
-  galeriWisata: "Ketapang Tourism Gallery",
-  galeriDesc: "Explore Ketapang's visual richness through a collection of nature, culture, culinary, and art tourism photos. Each image reflects invaluable local wealth.",
-  filterGaleri: "Filter Gallery",
-  semua: "All",
-  bagikan: "Share",
-  lihatAsli: "View Original",
-  tidakAdaGambar: "No images found for this category",
-  galeriTerpopuler: "Visitor's Favorite Gallery",
-  galeriTerpopulerDesc: "Most viewed and liked photos by website visitors",
-  kenangan: "Best Memories from Ketapang",
-  
   // Statistics
   statisticsTitle: "Ketapang in Numbers",
   statisticsDesc: "Latest data on Ketapang tourism and culture",
@@ -58,15 +46,29 @@ export const enTranslations = {
   destinasiAktif: "Active Destinations",
   eventBudaya: "Cultural Events",
   komunitasLokal: "Local Communities",
+  destinasiWisata: "Tourism Destinations",
+  pengunjungPerTahun: "Visitors per Year",
+  tahunBerdiri: "Year Established",
+  ratingKepuasan: "Satisfaction Rating",
   
   // Testimonials
   testimonialsTitle: "Visitor Stories",
   testimonialsDesc: "Listen to unforgettable experiences from travelers",
+  testimoniPengunjung: "Visitor Testimonials",
+  ulasanTerverifikasi: "Verified Review",
+  terpercaya: "Trusted",
+  bagikanPengalaman: "Share Your Experience!",
+  bagikanPengalamanDesc: "Have you visited Ketapang? Tell us about your amazing experience",
+  tulisTestimoni: "Write Testimonial",
   
   // News & Articles
   newsTitle: "Latest News & Articles",
   newsDesc: "Latest information about Ketapang tourism and culture",
   bacaSelengkapnya: "Read More",
+  beritaEventTerkini: "Latest News & Events",
+  beritaEventDesc: "Follow the latest developments and exciting events in Ketapang Regency",
+  lihatSemuaBerita: "View All News",
+  daftarNewsletter: "Subscribe Newsletter",
   
   // Contact
   contactTitle: "Contact Us",
@@ -80,6 +82,47 @@ export const enTranslations = {
   jamOperasional: "Operating Hours",
   seninJumat: "Monday - Friday: 08:00 - 17:00",
   sabtuMinggu: "Saturday - Sunday: 09:00 - 15:00",
+  contactDescFooter: "Have questions about Ketapang tourism destinations? Don't hesitate to contact our team",
+  kirimPertanyaan: "Send Question",
+  masukkanNama: "Enter your full name",
+  emailPlaceholder: "name@email.com",
+  pesanPlaceholder: "Write your question or message here...",
+  
+  // Footer
+  footerDesc: "Official tourism and culture portal of Ketapang Regency, West Kalimantan",
+  linkCepat: "Quick Links",
+  informasi: "Information",
+  sosialMedia: "Social Media",
+  hargaTiket: "Ticket Price",
+  caraMenuju: "How to Get There",
+  cuaca: "Weather",
+  footerTagline: "Explore the natural beauty and cultural richness of Ketapang Regency. The best tourism destinations in West Kalimantan await you.",
+  tautanCepat: "Quick Links",
+  destinasiWisataFooter: "Tourism Destinations",
+  paketWisata: "Tourism Packages",
+  galeriFoto: "Photo Gallery",
+  beritaEvent: "News & Events",
+  tentangKami: "About Us",
+  kontakFooter: "Contact",
+  newsletter: "Newsletter",
+  newsletterDesc: "Get the latest information about tourism destinations and exciting events.",
+  emailAnda: "Your Email",
+  berlangganan: "Subscribe",
+  syaratKetentuan: "Terms & Conditions",
+  kebijakanPrivasi: "Privacy Policy",
+  hakCipta: "© 2024 E-Tourism Ketapang City. All rights reserved.",
+  
+  // Gallery
+  galeriWisata: "Ketapang Tourism Gallery",
+  galeriDesc: "Explore Ketapang's visual richness through a collection of nature, culture, culinary, and art tourism photos. Each image reflects invaluable local wealth.",
+  filterGaleri: "Filter Gallery",
+  semua: "All",
+  bagikan: "Share",
+  lihatAsli: "View Original",
+  tidakAdaGambar: "No images found for this category",
+  galeriTerpopuler: "Visitor's Favorite Gallery",
+  galeriTerpopulerDesc: "Most viewed and liked photos by website visitors",
+  kenangan: "Best Memories from Ketapang",
   
   // Detail Pages
   tentangDestinasi: "About Destination",
@@ -152,15 +195,6 @@ export const enTranslations = {
   "200Orang": "200 people",
   "300Orang": "300 people",
   "800Orang": "800 people",
-  
-  // Footer
-  footerDesc: "Official tourism and culture portal of Ketapang Regency, West Kalimantan",
-  linkCepat: "Quick Links",
-  informasi: "Information",
-  sosialMedia: "Social Media",
-  hargaTiket: "Ticket Price",
-  caraMenuju: "How to Get There",
-  cuaca: "Weather",
   
   // Admin specific
   dashboard: "Dashboard",
