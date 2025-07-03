@@ -1,3 +1,4 @@
+
 export const enTranslations = {
   // Navigation
   beranda: "Home",
@@ -126,7 +127,6 @@ export const enTranslations = {
   
   // Detail Pages
   tentangDestinasi: "About Destination",
-  galeriFoto: "Photo Gallery",
   fasilitas: "Facilities",
   tipsBerkunjung: "Visiting Tips",
   kembaliKe: "Back to",
@@ -147,7 +147,6 @@ export const enTranslations = {
   eventDesc: "Schedule of cultural events and traditional festivals in Ketapang that you shouldn't miss",
   filterKategori: "Filter Category",
   festival: "Festival",
-  kuliner: "Culinary",
   workshop: "Workshop", 
   pameran: "Exhibition",
   tanggal: "Date",
@@ -242,4 +241,8 @@ export const enTranslations = {
   // Button improvements
   daftarSekarang: "Register Now",
   jelajahiSekarang: "Explore Now",
+  
+  // Website title and branding
+  wisataBudaya: "Tourism & Culture",
+  eKetapangCity: "E-Tourism Ketapang City",
 };

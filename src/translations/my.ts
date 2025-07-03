@@ -1,3 +1,4 @@
+
 export const myTranslations = {
   // Navigation
   beranda: "Laman Utama",
@@ -126,7 +127,6 @@ export const myTranslations = {
   
   // Detail Pages
   tentangDestinasi: "Tentang Destinasi",
-  galeriFoto: "Galeri Foto",
   fasilitas: "Kemudahan",
   tipsBerkunjung: "Tips Melawat",
   kembaliKe: "Kembali ke",
@@ -147,7 +147,6 @@ export const myTranslations = {
   eventDesc: "Jadual acara budaya dan festival tradisional Ketapang yang tidak patut dilepaskan",
   filterKategori: "Tapis Kategori",
   festival: "Festival",
-  kuliner: "Kuliner",
   workshop: "Bengkel",
   pameran: "Pameran",
   tanggal: "Tarikh",
@@ -242,4 +241,8 @@ export const myTranslations = {
   // Button improvements
   daftarSekarang: "Daftar Sekarang",
   jelajahiSekarang: "Jelajah Sekarang",
+  
+  // Website title and branding
+  wisataBudaya: "Pelancongan & Budaya",
+  eKetapangCity: "E-Tourism Ketapang City",
 };
