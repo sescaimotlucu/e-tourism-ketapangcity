@@ -1,0 +1,20 @@
+
+export const categoriesTranslations = {
+  categoriesTitle: "Temui Keajaiban Ketapang",
+  categoriesSubtitle: "Temui pesona pelancongan alam, budaya, masakan, dan seni tradisional yang kaya dengan nilai sejarah dan kebijaksanaan tempatan",
+  wisataAlam: "Pelancongan Alam",
+  wisataBudaya: "Pelancongan Budaya",
+  wisataKuliner: "Pelancongan Kuliner",
+  wisataTari: "Pelancongan Tarian",
+  alamDesc: "Jelajahi keindahan alam Ketapang dengan hutan tropika, pantai eksotik, dan air terjun yang memukau",
+  budayaDesc: "Temui warisan budaya Melayu dan Dayak melalui bangunan bersejarah dan tradisi turun temurun",
+  kulinerDesc: "Nikmati cita rasa autentik masakan Ketapang dengan rempah khas Kalimantan Barat",
+  tariDesc: "Saksikan keanggunan tarian tradisional Jepin dan Monong yang sarat makna budaya",
+  destinasiCount: "Destinasi",
+  situsCount: "Tapak Bersejarah",
+  kulinerCount: "Masakan Khas",
+  pertunjukanCount: "Persembahan",
+  lihatSemua: "Lihat Semua",
+  tertarikBerkunjung: "Berminat untuk menjelajahi keajaiban Ketapang?",
+  lihatGaleri: "Lihat Galeri",
+};
