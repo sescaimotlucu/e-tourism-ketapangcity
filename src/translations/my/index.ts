@@ -14,6 +14,21 @@ export { eventsTranslations } from './events';
 export { adminTranslations } from './admin';
 export { commonTranslations } from './common';
 
+import { navigationTranslations } from './navigation';
+import { heroTranslations } from './hero';
+import { categoriesTranslations } from './categories';
+import { statisticsTranslations } from './statistics';
+import { testimonialsTranslations } from './testimonials';
+import { newsTranslations } from './news';
+import { contactTranslations } from './contact';
+import { footerTranslations } from './footer';
+import { galleryTranslations } from './gallery';
+import { pagesTranslations } from './pages';
+import { mapTranslations } from './map';
+import { eventsTranslations } from './events';
+import { adminTranslations } from './admin';
+import { commonTranslations } from './common';
+
 export const myTranslations = {
   ...navigationTranslations,
   ...heroTranslations,
