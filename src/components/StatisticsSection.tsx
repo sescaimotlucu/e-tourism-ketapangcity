@@ -1,18 +1,10 @@
 
-import { useState, useEffect, useRef } from 'react';
 import { MapPin, Users, Calendar, Star } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const StatisticsSection = () => {
   const { t } = useLanguage();
-  const [counts, setCounts] = useState({
-    destinations: 0,
-    visitors: 0,
-    years: 0,
-    rating: 0
-  });
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   const stats = [
     {
@@ -41,58 +33,9 @@ const StatisticsSection = () => {
     }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          
-          // Animate counters with improved timing
-          stats.forEach((stat, index) => {
-            const duration = 2000;
-            const steps = 60;
-            const increment = stat.value / steps;
-            let current = 0;
-            let step = 0;
-            
-            const timer = setInterval(() => {
-              step++;
-              current = Math.min(stat.value, increment * step);
-              
-              if (step >= steps) {
-                current = stat.value;
-                clearInterval(timer);
-              }
-              
-              setCounts(prev => ({
-                ...prev,
-                [index === 0 ? 'destinations' : 
-                 index === 1 ? 'visitors' : 
-                 index === 2 ? 'years' : 'rating']: current
-              }));
-            }, duration / steps);
-          });
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [hasAnimated, stats]);
-
-  const formatNumber = (num: number, isRating: boolean = false) => {
-    if (isRating) return num.toFixed(1);
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(0) + 'K';
-    return Math.floor(num).toString();
-  };
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-20 bg-gradient-to-r from-red-dark to-green-forest relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-gradient-to-r from-red-dark to-green-forest relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-20 h-20 border border-golden-beige rounded-full"></div>
@@ -112,22 +55,25 @@ const StatisticsSection = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, index) => {
-            const countValues = [counts.destinations, counts.visitors, counts.years, counts.rating];
             const isRating = index === 3;
             
             return (
               <div 
                 key={stat.label}
-                className="text-center group"
+                className="text-center group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-golden-beige rounded-full mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-golden-beige rounded-full mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
                   <stat.icon className="h-8 w-8 lg:h-10 lg:w-10 text-red-dark" />
                 </div>
                 
                 <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2">
-                  {formatNumber(countValues[index], isRating)}
-                  <span className="text-golden-beige">{stat.suffix}</span>
+                  <AnimatedCounter 
+                    targetValue={stat.value}
+                    isDecimal={isRating}
+                    suffix={stat.suffix}
+                    className="inline-block"
+                  />
                 </div>
                 
                 <p className="text-golden-beige/90 text-sm md:text-base lg:text-lg font-medium px-2">

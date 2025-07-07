@@ -83,24 +83,24 @@ const HeroSection = () => {
       <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 pt-24">
         <div className="max-w-7xl mx-auto">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-playfair font-bold mb-6 leading-tight tracking-wide drop-shadow-2xl">
-              <span className="text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 leading-tight tracking-wide drop-shadow-2xl">
+              <span className="text-white animate-text-glow">
                 Seni & Budaya Tradisional
               </span>
             </h1>
           </div>
           
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-fade-in-up animate-parallax" style={{ animationDelay: '0.5s' }}>
             <p className="text-lg sm:text-xl md:text-2xl mb-12 text-white/90 font-poppins font-light leading-relaxed max-w-4xl mx-auto tracking-wide drop-shadow-lg">
               Saksikan pertunjukan seni tradisional yang memukau dan rasakan kekayaan budaya Ketapang
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up mb-16" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up mb-16" style={{ animationDelay: '0.8s' }}>
             <Button 
               size="lg" 
               onClick={() => scrollToSection('kategoriWisata')}
-              className="bg-red-dark hover:bg-red-soft text-white px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 group backdrop-blur-sm"
+              className="bg-red-dark hover:bg-red-soft text-white px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-110 hover:shadow-red-dark/40 border-0 group backdrop-blur-sm animate-pulse-glow"
             >
               <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
               Jelajahi Sekarang
@@ -110,10 +110,11 @@ const HeroSection = () => {
               variant="outline" 
               size="lg"
               onClick={() => scrollToSection('acara')}
-              className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white hover:border-white/80 px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl transition-all duration-500 transform hover:scale-105 group"
+              className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-red-dark hover:border-white transition-all duration-500 transform hover:scale-105 px-12 py-6 text-xl font-poppins font-semibold rounded-2xl shadow-2xl group overflow-hidden relative"
             >
-              Pelajari Lebih Lanjut
-              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="relative z-10">Pelajari Lebih Lanjut</span>
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
+              <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </Button>
           </div>
 
@@ -135,23 +136,23 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows with slide-in animation */}
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-golden-beige hover:bg-white/20 backdrop-blur-md z-20 w-16 h-16 rounded-2xl border border-white/20 transition-all duration-300 hover:scale-110 shadow-xl"
+        className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-golden-beige hover:bg-white/20 backdrop-blur-md z-20 w-16 h-16 rounded-2xl border border-white/20 transition-all duration-300 hover:scale-110 shadow-xl group hover:-translate-x-2"
         onClick={prevSlide}
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-8 w-8 group-hover:animate-wiggle" />
       </Button>
       
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-golden-beige hover:bg-white/20 backdrop-blur-md z-20 w-16 h-16 rounded-2xl border border-white/20 transition-all duration-300 hover:scale-110 shadow-xl"
+        className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-golden-beige hover:bg-white/20 backdrop-blur-md z-20 w-16 h-16 rounded-2xl border border-white/20 transition-all duration-300 hover:scale-110 shadow-xl group hover:translate-x-2"
         onClick={nextSlide}
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-8 w-8 group-hover:animate-wiggle" />
       </Button>
 
       {/* Slide Indicators */}

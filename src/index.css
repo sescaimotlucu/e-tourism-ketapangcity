@@ -316,6 +316,30 @@
   .animate-heartbeat {
     animation: heartbeat 2s ease-in-out infinite;
   }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1.2s ease-out;
+  }
+
+  .animate-text-glow {
+    animation: text-glow 3s ease-in-out infinite;
+  }
+
+  .animate-parallax {
+    animation: parallax-float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-left {
+    animation: fade-in-left 0.8s ease-out;
+  }
+
+  .animate-spin-slow {
+    animation: spin 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
 /* Enhanced Keyframe Animations */
@@ -496,6 +520,46 @@
   }
   70% {
     transform: scale(1);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallax-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }
 
