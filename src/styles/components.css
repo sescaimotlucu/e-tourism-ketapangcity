@@ -1,0 +1,151 @@
+/* Component Styles */
+@layer components {
+  /* Enhanced button styles with Ketapang colors */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-green-forest via-nature-gradient-middle to-nature-gradient-end;
+    @apply hover:from-nature-gradient-start hover:via-green-forest hover:to-nature-gradient-middle;
+    @apply transition-all duration-500 transform hover:scale-105;
+    @apply shadow-lg hover:shadow-xl;
+  }
+
+  .btn-modern {
+    @apply rounded-full px-8 py-4 font-poppins font-semibold;
+    @apply transition-all duration-300 transform hover:scale-105;
+    @apply shadow-lg hover:shadow-xl;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-red-dark to-red-soft hover:from-red-soft hover:to-red-dark;
+    @apply text-white font-semibold rounded-full px-6 py-3;
+    @apply transition-all duration-300 transform hover:scale-105;
+    @apply shadow-lg hover:shadow-2xl;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.3);
+    animation: pulse-glow 2s infinite;
+  }
+
+  .btn-ketapang {
+    background-color: #801C1C;
+    @apply text-white font-semibold rounded-full px-8 py-3;
+    @apply transition-all duration-300 transform hover:scale-105;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .btn-ketapang:hover {
+    background-color: #a02626;
+    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.4);
+    animation: shimmer 2s infinite;
+  }
+
+  /* Typography system with consistent sizing */
+  .section-title {
+    @apply text-5xl md:text-6xl font-playfair font-bold text-center;
+    animation: text-glow 3s ease-in-out infinite;
+  }
+
+  .heading-large {
+    @apply text-4xl font-playfair font-bold;
+  }
+
+  .heading-medium {
+    @apply text-2xl font-playfair font-semibold;
+  }
+
+  .text-paragraph {
+    @apply text-lg leading-relaxed;
+  }
+
+  .divider-x {
+    @apply w-16 h-1 bg-golden-beige mx-auto my-6 rounded-full;
+    animation: expand-contract 3s ease-in-out infinite;
+  }
+
+  /* Enhanced card styles with uniform sizing */
+  .card-uniform {
+    @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl;
+    @apply transition-all duration-500 transform hover:scale-105;
+    @apply border-0 overflow-hidden;
+    min-height: 400px;
+    animation: card-entrance 0.8s ease-out;
+  }
+
+  .card-uniform:hover {
+    animation: card-float 2s ease-in-out infinite;
+  }
+
+  .card-uniform .card-image {
+    @apply aspect-[4/3] overflow-hidden;
+  }
+
+  .card-uniform .card-content {
+    @apply p-6 flex flex-col justify-between flex-1;
+  }
+
+  /* Stat cards */
+  .stat-card {
+    @apply backdrop-blur-lg bg-white/15 rounded-3xl p-8 border border-white/30;
+    @apply shadow-2xl transition-all duration-500 hover:scale-105;
+    @apply text-center;
+    animation: stats-glow 4s ease-in-out infinite;
+  }
+
+  .stat-card:hover {
+    animation: stats-pulse 1.5s ease-in-out infinite;
+  }
+
+  /* Text animations */
+  .text-gradient {
+    @apply bg-gradient-to-r from-green-forest via-golden-beige to-red-soft bg-clip-text text-transparent;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-500 transform hover:scale-105 hover:shadow-2xl;
+    @apply hover:shadow-green-forest/20;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    animation: glass-shimmer 3s ease-in-out infinite;
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    @apply relative overflow-hidden;
+  }
+
+  .parallax-element {
+    @apply absolute inset-0 will-change-transform;
+  }
+
+  /* Pinterest-style grid */
+  .pinterest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Smooth scroll behavior enhancement */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced gradient backgrounds */
+  .bg-cream-gradient {
+    background: linear-gradient(135deg, #fef7ed 0%, #f0fdf4 50%, #fefce8 100%);
+    animation: bg-shift 8s ease-in-out infinite;
+  }
+
+  /* Loading states */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
