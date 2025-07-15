@@ -1,7 +1,8 @@
 
 import { useState } from 'react';
-import { Menu, X, MapPin, Globe, Camera } from 'lucide-react';
+import { Menu, X, MapPin, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -17,15 +18,6 @@ const Header = () => {
     { label: t('kontak'), href: '#kontak', isLink: false },
   ];
 
-  const languages = [
-    { code: 'ID', label: 'Bahasa', flag: '🇮🇩' },
-    { code: 'EN', label: 'English', flag: '🇺🇸' },
-    { code: 'MY', label: 'Melayu', flag: '🇲🇾' },
-  ];
-
-  const handleLanguageChange = (langCode: string) => {
-    setLanguage(langCode);
-  };
 
   const handleNavClick = (item: any) => {
     if (item.isLink) {
@@ -44,18 +36,22 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-red-dark/95 backdrop-blur-md shadow-xl border-b border-red-soft/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-ketapang-earth/95 to-ketapang-wood/95 backdrop-blur-md shadow-cultural border-b border-ketapang-gold/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 animate-fade-in-left">
+          {/* Enhanced Cultural Logo */}
+          <Link to="/" className="flex items-center space-x-4 animate-fade-in-left group">
             <div className="relative">
-              <MapPin className="h-10 w-10 text-golden-beige animate-float" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-forest rounded-full animate-pulse"></div>
+              <div className="w-12 h-12 bg-gradient-to-br from-ketapang-gold to-ketapang-sunset rounded-full flex items-center justify-center shadow-cultural group-hover:shadow-glow-traditional transition-all duration-300">
+                <MapPin className="h-6 w-6 text-ketapang-earth animate-float" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-ketapang-forest to-ketapang-traditional rounded-full animate-pulse border-2 border-white"></div>
             </div>
-            <div className="text-white font-poppins">
-              <h1 className="text-2xl font-bold tracking-tight">E-Tourism</h1>
-              <p className="text-sm text-golden-beige font-medium">{t('ketapangCity')}</p>
+            <div className="text-white font-cultural">
+              <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-ketapang-gold to-white bg-clip-text text-transparent">
+                E-Tourism
+              </h1>
+              <p className="text-sm text-ketapang-gold font-medium">{t('ketapangCity')}</p>
             </div>
           </Link>
 
@@ -66,63 +62,41 @@ const Header = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`relative text-white hover:text-golden-beige transition-all duration-300 font-poppins font-medium text-lg group animate-fade-in flex items-center transform hover:scale-105 ${
-                    location.pathname === item.href ? 'text-golden-beige font-bold' : ''
+                  className={`relative text-white hover:text-ketapang-gold transition-all duration-300 font-cultural font-medium text-lg group animate-fade-in flex items-center transform hover:scale-105 ${
+                    location.pathname === item.href ? 'text-ketapang-gold font-bold shadow-glow-traditional' : ''
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label === t('galeri') && <Camera className="h-4 w-4 mr-2 animate-bounce" />}
                   {item.label}
-                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-golden-beige to-green-forest group-hover:w-full transition-all duration-500 ease-out"></span>
+                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-ketapang-gold to-ketapang-sunset group-hover:w-full transition-all duration-500 ease-out shadow-cultural"></span>
                 </Link>
               ) : (
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item)}
-                  className="relative text-white hover:text-golden-beige transition-all duration-300 font-poppins font-medium text-lg group animate-fade-in transform hover:scale-105"
+                  className="relative text-white hover:text-ketapang-gold transition-all duration-300 font-cultural font-medium text-lg group animate-fade-in transform hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label}
-                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-golden-beige to-green-forest group-hover:w-full transition-all duration-500 ease-out"></span>
+                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-ketapang-gold to-ketapang-sunset group-hover:w-full transition-all duration-500 ease-out shadow-cultural"></span>
                 </button>
               )
             ))}
           </nav>
 
-          {/* Language Selector & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            {/* Language Dropdown */}
-            <div className="relative group">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-white hover:text-golden-beige hover:bg-red-soft/20 font-poppins border border-red-soft/30 rounded-xl px-4 py-2 transition-all duration-300 transform hover:scale-105"
-              >
-                <Globe className="h-4 w-4 mr-2 animate-spin-slow" />
-                {currentLanguage}
-              </Button>
-              
-              <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 min-w-[140px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 animate-fade-in">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className={`w-full text-left px-4 py-2 hover:bg-golden-beige/10 text-red-dark font-poppins text-sm flex items-center space-x-2 transition-all duration-300 transform hover:scale-105 ${
-                      currentLanguage === lang.code ? 'bg-golden-beige/20 font-semibold' : ''
-                    }`}
-                  >
-                    <span className="text-lg animate-bounce">{lang.flag}</span>
-                    <span>{lang.label}</span>
-                  </button>
-                ))}
-              </div>
+          {/* Enhanced Language Switcher & Mobile Menu */}
+          <div className="flex items-center space-x-6">
+            {/* Enhanced Language Switcher */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Enhanced Mobile Menu Button */}
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden text-white hover:text-golden-beige hover:bg-red-soft/20 rounded-xl transition-all duration-300 transform hover:scale-105"
+              className="text-white hover:text-ketapang-gold hover:bg-ketapang-wood/20 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6 animate-spin" /> : <Menu className="h-6 w-6 animate-pulse" />}
@@ -130,17 +104,17 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-red-dark/95 backdrop-blur-md border-t border-red-soft/20 rounded-b-2xl animate-fade-in-up">
+          <div className="md:hidden bg-gradient-to-br from-ketapang-earth/95 to-ketapang-wood/95 backdrop-blur-md border-t border-ketapang-gold/20 rounded-b-2xl animate-fade-in-up shadow-cultural">
             <nav className="py-6 space-y-1">
               {navItems.map((item, index) => (
                 item.isLink ? (
                   <Link
                     key={item.label}
                     to={item.href}
-                    className={`flex items-center px-6 py-3 text-white hover:text-golden-beige hover:bg-red-soft/20 transition-all duration-300 font-poppins font-medium rounded-xl mx-2 animate-fade-in-left transform hover:scale-105 ${
-                      location.pathname === item.href ? 'text-golden-beige bg-red-soft/20' : ''
+                    className={`flex items-center px-6 py-3 text-white hover:text-ketapang-gold hover:bg-ketapang-wood/20 transition-all duration-300 font-cultural font-medium rounded-xl mx-2 animate-fade-in-left transform hover:scale-105 ${
+                      location.pathname === item.href ? 'text-ketapang-gold bg-ketapang-wood/30 shadow-cultural' : ''
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => setIsMenuOpen(false)}
@@ -152,13 +126,18 @@ const Header = () => {
                   <button
                     key={item.label}
                     onClick={() => handleNavClick(item)}
-                    className="block w-full text-left px-6 py-3 text-white hover:text-golden-beige hover:bg-red-soft/20 transition-all duration-300 font-poppins font-medium rounded-xl mx-2 animate-fade-in-left transform hover:scale-105"
+                    className="block w-full text-left px-6 py-3 text-white hover:text-ketapang-gold hover:bg-ketapang-wood/20 transition-all duration-300 font-cultural font-medium rounded-xl mx-2 animate-fade-in-left transform hover:scale-105"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item.label}
                   </button>
                 )
               ))}
+              
+              {/* Mobile Language Switcher */}
+              <div className="px-6 py-3 border-t border-ketapang-gold/20 mt-4">
+                <LanguageSwitcher />
+              </div>
             </nav>
           </div>
         )}

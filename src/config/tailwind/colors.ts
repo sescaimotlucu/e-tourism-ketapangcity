@@ -61,7 +61,22 @@ export const shadcnColors = {
   }
 };
 
+// Ketapang Cultural Colors
+export const ketapangColors = {
+  'ketapang-earth': 'hsl(25 25% 20%)',
+  'ketapang-wood': 'hsl(30 35% 45%)', 
+  'ketapang-gold': 'hsl(45 85% 65%)',
+  'ketapang-forest': 'hsl(140 30% 40%)',
+  'ketapang-river': 'hsl(200 45% 55%)',
+  'ketapang-sunset': 'hsl(15 70% 60%)',
+  'ketapang-traditional': 'hsl(350 45% 50%)',
+  'dayak-batik-primary': 'hsl(25 60% 35%)',
+  'dayak-batik-secondary': 'hsl(45 75% 55%)',
+  'dayak-ornament': 'hsl(15 85% 45%)',
+};
+
 export const allColors = {
   ...customColors,
+  ...ketapangColors,
   ...shadcnColors,
 };
