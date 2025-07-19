@@ -1,43 +1,74 @@
-/* Component Styles */
+/* Enhanced Component Styles - Ketapang Cultural Theme */
 @layer components {
-  /* Enhanced button styles with Ketapang colors */
+  /* Premium Button System */
   .btn-gradient {
-    @apply bg-gradient-to-r from-green-forest via-nature-gradient-middle to-nature-gradient-end;
-    @apply hover:from-nature-gradient-start hover:via-green-forest hover:to-nature-gradient-middle;
+    background: var(--gradient-mystical);
+    @apply text-white font-poppins font-semibold px-8 py-4 rounded-2xl;
     @apply transition-all duration-500 transform hover:scale-105;
     @apply shadow-lg hover:shadow-xl;
+    position: relative;
+    overflow: hidden;
   }
 
-  .btn-modern {
-    @apply rounded-full px-8 py-4 font-poppins font-semibold;
-    @apply transition-all duration-300 transform hover:scale-105;
-    @apply shadow-lg hover:shadow-xl;
+  .btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
   }
 
-  .btn-primary {
-    @apply bg-gradient-to-r from-red-dark to-red-soft hover:from-red-soft hover:to-red-dark;
-    @apply text-white font-semibold rounded-full px-6 py-3;
-    @apply transition-all duration-300 transform hover:scale-105;
+  .btn-gradient:hover::before {
+    left: 100%;
+  }
+
+  .btn-cultural {
+    background: var(--gradient-cultural);
+    @apply text-white font-playfair font-semibold px-10 py-5 rounded-3xl;
+    @apply transition-all duration-500 transform hover:scale-105;
     @apply shadow-lg hover:shadow-2xl;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-cultural);
   }
 
-  .btn-primary:hover {
-    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.3);
-    animation: pulse-glow 2s infinite;
+  .btn-cultural:hover {
+    box-shadow: var(--shadow-deep);
+    animation: mystical-glow 2s infinite;
   }
 
-  .btn-ketapang {
-    background-color: #801C1C;
-    @apply text-white font-semibold rounded-full px-8 py-3;
-    @apply transition-all duration-300 transform hover:scale-105;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  .btn-traditional {
+    background: var(--gradient-earth);
+    @apply text-white font-merriweather font-bold px-8 py-4 rounded-2xl;
+    @apply transition-all duration-500 transform hover:scale-105;
+    position: relative;
+    overflow: hidden;
   }
 
-  .btn-ketapang:hover {
-    background-color: #a02626;
-    box-shadow: 0 8px 24px rgba(128, 28, 28, 0.4);
-    animation: shimmer 2s infinite;
+  .btn-traditional::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-luxury);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .btn-traditional:hover::after {
+    opacity: 1;
+  }
+
+  .btn-mystical {
+    background: var(--gradient-nature);
+    @apply text-white font-poppins font-semibold px-8 py-4 rounded-2xl;
+    @apply transition-all duration-500 transform hover:scale-105 hover:rotate-1;
+    box-shadow: var(--shadow-batik);
+  }
+
+  .btn-mystical:hover {
+    box-shadow: var(--glow-mystical);
+    animation: traditional-pulse 1.5s infinite;
   }
 
   /* Typography system with consistent sizing */
@@ -63,25 +94,63 @@
     animation: expand-contract 3s ease-in-out infinite;
   }
 
-  /* Enhanced card styles with uniform sizing */
-  .card-uniform {
+  /* Premium Card System */
+  .card-cultural {
     @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl;
-    @apply transition-all duration-500 transform hover:scale-105;
-    @apply border-0 overflow-hidden;
-    min-height: 400px;
-    animation: card-entrance 0.8s ease-out;
+    @apply transition-all duration-700 transform hover:scale-105 hover:-rotate-1;
+    @apply border-0 overflow-hidden relative;
+    min-height: 450px;
+    box-shadow: var(--shadow-cultural);
   }
 
-  .card-uniform:hover {
-    animation: card-float 2s ease-in-out infinite;
+  .card-cultural::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-mystical);
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 
-  .card-uniform .card-image {
-    @apply aspect-[4/3] overflow-hidden;
+  .card-cultural:hover::before {
+    opacity: 1;
   }
 
-  .card-uniform .card-content {
-    @apply p-6 flex flex-col justify-between flex-1;
+  .card-cultural:hover {
+    box-shadow: var(--shadow-deep);
+    animation: mystical-glow 3s ease-in-out infinite;
+  }
+
+  .card-premium {
+    @apply bg-gradient-to-br from-white via-white to-ketapang-cream;
+    @apply rounded-3xl shadow-2xl hover:shadow-3xl;
+    @apply transition-all duration-700 transform hover:scale-105;
+    @apply border border-ketapang-gold/20 overflow-hidden relative;
+    min-height: 480px;
+  }
+
+  .card-premium::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-luxury);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+
+  .card-premium:hover::after {
+    opacity: 0.05;
+  }
+
+  .card-traditional {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl;
+    @apply transition-all duration-500 transform hover:scale-102;
+    @apply border-l-4 border-ketapang-gold overflow-hidden;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f4f4f4' fill-opacity='0.03'%3E%3Cpolygon points='10 0 20 10 10 20 0 10'/%3E%3C/g%3E%3C/svg%3E");
   }
 
   /* Stat cards */

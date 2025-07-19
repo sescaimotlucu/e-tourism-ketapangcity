@@ -5,8 +5,9 @@ import CategoryGrid from '@/components/CategoryGrid';
 import StatisticsSection from '@/components/StatisticsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import NewsSection from '@/components/NewsSection';
-import ContactForm from '@/components/ContactForm';
+import EnhancedContactForm from '@/components/EnhancedContactForm';
 import Footer from '@/components/Footer';
+import GallerySection from '@/components/GallerySection';
 import { EventsSection } from '@/components/EventsSection';
 import { MapSection } from '@/components/MapSection';
 
@@ -26,12 +27,13 @@ const Index = () => {
         <section id="acara">
           <EventsSection />
         </section>
+        <GallerySection />
         <NewsSection />
         <section id="peta">
           <MapSection />
         </section>
         <section id="kontak">
-          <ContactForm />
+          <EnhancedContactForm />
         </section>
       </main>
       <Footer />

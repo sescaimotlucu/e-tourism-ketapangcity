@@ -1,9 +1,9 @@
-/* CSS Custom Properties - Ketapang Cultural Theme Variables */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+/* CSS Custom Properties - Enhanced Ketapang Cultural Theme Variables */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
 @layer base {
   :root {
-    /* Core Ketapang Cultural Colors - HSL Format */
+    /* Enhanced Ketapang Cultural Colors - HSL Format */
     --ketapang-earth: 25 25% 20%;           /* Dark earth brown */
     --ketapang-wood: 30 35% 45%;            /* Traditional wood */
     --ketapang-gold: 45 85% 65%;            /* Golden traditional ornament */
@@ -17,15 +17,30 @@
     --dayak-batik-secondary: 45 75% 55%;    /* Secondary batik gold */
     --dayak-ornament: 15 85% 45%;           /* Traditional ornament red */
     
-    /* Nature-Inspired Gradients */
+    /* Expanded Color Palette */
+    --ketapang-cream: 45 50% 95%;           /* Soft cream */
+    --ketapang-moss: 125 25% 30%;           /* Deep moss green */
+    --ketapang-amber: 35 80% 55%;           /* Rich amber */
+    --ketapang-terracotta: 20 65% 45%;      /* Terracotta earth */
+    --ketapang-sage: 140 20% 60%;           /* Sage green */
+    
+    /* Enhanced Gradients */
     --gradient-forest: linear-gradient(135deg, hsl(var(--ketapang-forest)), hsl(var(--ketapang-gold)));
     --gradient-sunset: linear-gradient(135deg, hsl(var(--ketapang-sunset)), hsl(var(--ketapang-traditional)));
     --gradient-cultural: linear-gradient(135deg, hsl(var(--dayak-batik-primary)), hsl(var(--dayak-batik-secondary)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--ketapang-earth)), hsl(var(--ketapang-terracotta)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--ketapang-moss)), hsl(var(--ketapang-sage)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--ketapang-amber)), hsl(var(--ketapang-gold)));
+    --gradient-mystical: linear-gradient(135deg, hsl(var(--ketapang-earth)) 0%, hsl(var(--ketapang-wood)) 35%, hsl(var(--ketapang-amber)) 70%, hsl(var(--ketapang-gold)) 100%);
     
-    /* Traditional Shadows and Effects */
+    /* Enhanced Shadows and Effects */
     --shadow-cultural: 0 8px 32px hsla(var(--ketapang-earth), 0.15);
     --shadow-batik: 0 4px 20px hsla(var(--dayak-ornament), 0.2);
+    --shadow-deep: 0 20px 60px hsla(var(--ketapang-earth), 0.25);
+    --shadow-golden: 0 8px 32px hsla(var(--ketapang-gold), 0.3);
     --glow-traditional: 0 0 20px hsla(var(--ketapang-gold), 0.3);
+    --glow-mystical: 0 0 40px hsla(var(--ketapang-amber), 0.4);
+    --glow-forest: 0 0 30px hsla(var(--ketapang-forest), 0.4);
 
     /* Base Theme Variables */
     --background: 45 45% 98%;
@@ -108,9 +123,10 @@
     --sidebar-ring: var(--ketapang-gold);
   }
 
-  /* Cultural Typography */
+  /* Enhanced Cultural Typography */
   .font-cultural {
     font-family: 'Playfair Display', serif;
+    font-optical-sizing: auto;
   }
   
   .font-traditional {
@@ -119,6 +135,33 @@
   
   .font-modern {
     font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-elegant {
+    font-family: 'Crimson Text', serif;
+  }
+
+  /* Enhanced Typography Utilities */
+  .text-shadow-cultural {
+    text-shadow: 2px 2px 4px hsla(var(--ketapang-earth), 0.3);
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 10px hsla(var(--ketapang-gold), 0.5), 0 0 20px hsla(var(--ketapang-gold), 0.3);
+  }
+  
+  .text-gradient-cultural {
+    background: var(--gradient-cultural);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-gradient-mystical {
+    background: var(--gradient-mystical);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 }
